@@ -3,6 +3,7 @@ import Container from "../../components/Container";
 import Col from "../../components/Col";
 import Row from "../../components/Row";
 import auth from "../../services/authService"
+import './login.css';
 
 const Login = () => {
   const [email, setemail] = useState();
@@ -32,7 +33,7 @@ const Login = () => {
 
   return (
     <div>
-      <div className="mt-4">
+      <div className="mt-4 welcome">
         <h2>Welcome to the SembraCare Employee Portal!</h2>
       </div>
       <form onSubmit={handleSubmit}>
@@ -59,11 +60,11 @@ const Login = () => {
               />
             </Col>
           </Row>
-          <button className="btn btn-success" type="submit">
+          <button className="btn" type="submit">
             Submit
           </button>
         </Container>
-        <Container className="mt-4">
+        <Container className="mt-4 personalized-greeting">
           <h3>Hello {email}!</h3>
           <p>I probably shouldn't tell you this, but your password is {password}!</p>
         </Container>

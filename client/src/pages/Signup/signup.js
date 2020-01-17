@@ -4,6 +4,7 @@ import Col from "../../components/Col";
 import Row from "../../components/Row";
 import * as userService from '../../services/userService';
 import auth from "../../services/authService"
+import './signup.css';
 
 const Signup = () => {
   const [email, setemail] = useState();
@@ -28,7 +29,7 @@ const Signup = () => {
 
   return (
     <div>
-      <div className="mt-4">
+      <div className="mt-4 welcome">
         <h2>Welcome to the SembraCare Employee Portal!</h2>
       </div>
       <form onSubmit={handleSubmit}>
@@ -38,7 +39,7 @@ const Signup = () => {
               <input
                 className="form-control"
                 type="text"
-                placeholder="email"
+                placeholder="Email"
                 name="email"
                 onChange={e => setemail(e.target.value)}
               />
@@ -70,8 +71,8 @@ const Signup = () => {
             Submit
           </button>
         </Container>
-        <Container className="mt-4">
-          <h3>Hello {email}!</h3>
+        <Container className="mt-4 personalized-greeting">
+          <h3>Hello {employeeName}!</h3>
           <p>I probably shouldn't tell you this, but your password is {password}!</p>
         </Container>
       </form>
