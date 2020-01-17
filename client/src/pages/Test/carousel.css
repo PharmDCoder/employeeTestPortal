@@ -2,8 +2,8 @@ body {
   padding-top: 5%;
 }
 
-.wrapper {
-  /* border: 3px solid red; */
+.container-wrapper {
+  border: 3px solid red;
   min-height: 600px;
   max-height: 600px;
   overflow: scroll;

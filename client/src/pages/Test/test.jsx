@@ -12,7 +12,7 @@ import "./carousel.css";
 
 const Test = () => {
   return (
-    <MDBContainer className="wrapper">
+    <MDBContainer className="container-wrapper">
       <h1 className="title">{Hipaa.title}</h1>
       <MDBCarousel
         className="z-depth-1 carousel"
