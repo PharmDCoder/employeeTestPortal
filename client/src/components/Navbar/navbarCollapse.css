@@ -1,0 +1,57 @@
+
+
+.navbar {
+  /* padding-top: 5%; */
+  /* border: 2px solid purple; */
+}
+
+.navbar-brand {
+  /* border: 3px solid black; */
+}
+
+.brand {
+  /* border: 1px solid black; */
+  font-size: 2.5em;
+  color: blue;
+  /* padding: 10%; */
+}
+
+.navbar-nav {
+  /* border: 3px solid black; */
+  padding: 0;
+  margin-top: 20%;
+}
+
+
+
+.toggler {
+  position: absolute;
+  right: 10px;
+  top: -10px;
+  width: 75px;
+  height: 75px;
+  outline: none;
+}
+
+button:active {
+  border: none;
+  outline: none;
+}
+
+nav ul{
+  /* border: 2px solid red; */
+  list-style: none;
+  /* text-align: center; */
+  /* width: 100%; */
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-item {
+  font-size: 2em;
+  /* border: 2px solid green; */
+  background: blue;
+  /* margin-top: 5%; */
+}

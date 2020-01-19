@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  width: inherit;
+  min-height: inherit;
+  margin: 0;
+  padding-right: 0;
+}
+
+.welcome {
+  /* border: 1px solid purple; */
+  text-align: center;
+}
+
+.welcome h2 {
+  color: blue;
+  padding: 0 2%;
+}
+
+form {
+  /* border: 1px solid red; */
+  padding: 5%;
+  text-align: center;
+}
+
+.form-group {
+  border: 2px solid blue;
+  /* height: 4em; */
+  margin-bottom: 8%;
+}
+
+.form-control {
+  border: none;
+  height: 3em;
+}
+
+.btn {
+  color: blue;
+  background-color: gold;
+}
+
+.btn:focus {
+  background-color: blue;
+  color: white;
+}
+
+.personalized-greeting {
+  color: blue;
+}
+
+
+
+
+
+/* ******** TO DO ******** */
+/* 
+Add more/change style 
+  button effects 
+  background
+  form background
+  work on navbar 
+*/
