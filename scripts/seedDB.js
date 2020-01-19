@@ -22,8 +22,11 @@ const testSeed = [
       {
         questionText: "All of the following should remain confidential except:",
         questionAnswer: "reporting a fall to the nurse",
-        questionOptionsGood:
-          ["client diagnosis", "client social security number", "clients phone number"]
+        questionOptionsGood: [
+          "client diagnosis",
+          "client social security number",
+          "clients phone number"
+        ]
       },
       {
         questionText:
@@ -34,8 +37,11 @@ const testSeed = [
       {
         questionText: "If you share client confidential information you could:",
         questionAnswer: "All of the above",
-        questionOptionsGood:
-          ["Lose your job", "Face criminal charges", "Have a lawsuit"]
+        questionOptionsGood: [
+          "Lose your job",
+          "Face criminal charges",
+          "Have a lawsuit"
+        ]
       },
       {
         questionText:
@@ -59,8 +65,11 @@ const testSeed = [
         questionText:
           "The following must be kept in a locked cabinet or a supervised area:",
         questionAnswer: "All of the above",
-        questionOptionsGood:
-          ["Medical records", "Personal files", "TB test results"]
+        questionOptionsGood: [
+          "Medical records",
+          "Personal files",
+          "TB test results"
+        ]
       },
       {
         questionText:
@@ -87,7 +96,7 @@ const testSeed = [
         questionText:
           "Which of the following is not considered an activity of daily living (ADL)?",
         questionAnswer: "Cooking",
-        questionOptionsGood: ["Bathing","Toileting","Transferring"]
+        questionOptionsGood: ["Bathing", "Toileting", "Transferring"]
       },
       {
         questionText:
@@ -99,29 +108,40 @@ const testSeed = [
         questionText: "Which of the following is true about ADLs",
         questionAnswer:
           "They are the basic activities of caring for oneself that are essential for day to day living",
-        questionOptionsGood:
-          ["If you are unable to do any of them you are considered homebound","They include such household chores as washing dishes and doing laundry","All of the above."]
-
+        questionOptionsGood: [
+          "If you are unable to do any of them you are considered homebound",
+          "They include such household chores as washing dishes and doing laundry",
+          "All of the above."
+        ]
       },
       {
         questionText:
           "Which of the following would be important for the home health aide to do in order to help the patient improve in doing ADLs?",
         questionAnswer: "All of the above are important",
-        questionOptionsGood:
-          ["Learn how to use the assistive devices the patient may need","Encourage the patient to do as much for himself/herself as possible","Provide enough time for the patient to do things"]
+        questionOptionsGood: [
+          "Learn how to use the assistive devices the patient may need",
+          "Encourage the patient to do as much for himself/herself as possible",
+          "Provide enough time for the patient to do things"
+        ]
       },
       {
         questionText: "Which ADL limitation is reported most often?",
         questionAnswer: "Requiring assistance with bathing",
-        questionOptionsGood:
-          ["Requiring assistance with eating","Requiring assistance with toileting","Requiring assistance with dressing"]
+        questionOptionsGood: [
+          "Requiring assistance with eating",
+          "Requiring assistance with toileting",
+          "Requiring assistance with dressing"
+        ]
       },
       {
         questionText:
           "Which of the following is not a common reason that people need help with ADLs?",
         questionAnswer: "Having a baby",
-        questionOptionsGood:
-          ["Having paralysis","Having fractures","Having chronic lung disease"]
+        questionOptionsGood: [
+          "Having paralysis",
+          "Having fractures",
+          "Having chronic lung disease"
+        ]
       },
       {
         questionText:
@@ -132,21 +152,23 @@ const testSeed = [
       {
         questionText: "How many activities are commonly called the ADLs?",
         questionAnswer: "Six",
-        questionOptionsGood: ["Four,Three,Seven"]
+        questionOptionsGood: ["Four", "Three", "Seven"]
       },
       {
         questionText:
           "Which of the following is considered to be one of the ADLs?",
         questionAnswer: "Transferring",
-        questionOptionsGood:
-          ["Using the telephone","Doing laundry","Washing dishes"]
+        questionOptionsGood: [
+          "Using the telephone",
+          "Doing laundry",
+          "Washing dishes"
+        ]
       },
       {
         questionText:
           "Which of the following diseases/conditions may cause a patient to need assistance with ADLs?",
         questionAnswer: "All of the above",
-        questionOptionsGood:
-          ["Stroke","Severe arthritis","Major surgery"]
+        questionOptionsGood: ["Stroke", "Severe arthritis", "Major surgery"]
       }
     ]
   }

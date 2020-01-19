@@ -45,14 +45,24 @@ function Navbar({ user }) {
             </React.Fragment>
           )}
           {user && (
-            <li className="nav-item">
-              <Link
-                to="/logout"
-                className={window.location.pathname === "/logout" ? "nav-link active" : "nav-link"}
-              >
-                Log Out
+            <React.Fragment>
+              <li className="nav-item">
+                <Link
+                  to="/logout"
+                  className={window.location.pathname === "/logout" ? "nav-link active" : "nav-link"}
+                >
+                  Log Out
             </Link>
-            </li>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="/testlist"
+                  className={window.location.pathname === "/testlist" ? "nav-link active" : "nav-link"}
+                >
+                  Test List
+                </Link>
+              </li>
+            </React.Fragment>
           )}
         </ul>
       </div>

@@ -53,6 +53,18 @@ router.route("/api/auth").post((req, res, next) => {
         })
 })
 
+router.route("/api/currentTests").post((req, res, next) => {
+    db.Test.find({})
+        .then(function (dbCurrentTests) {
+            // If we were able to successfully find Tests, send it back to the client
+            res.json(dbCurrentTests);
+        })
+        .catch(function (err) {
+            // If an error occurred, send it to the client
+            res.send("ERROR");
+        });
+})
+
 router.route("/api/testRecords/:id").post((req, res, next) => {
     db.User.findOne({ _id: req.params.id })
         // ..and populate all of the notes associated with it

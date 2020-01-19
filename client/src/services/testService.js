@@ -7,12 +7,20 @@ export async function getTestRecords(userId) {
     return userTestRecords;
 }
 
-export async function postTestRecord(testRecord) {
-    const apiEndpoint = apiUrl + "/addTestRecord";
+export async function postTestRecord(testRecord, userID) {
+    const apiEndpoint = apiUrl + "/addTestRecord/" + userID;
     const newTestRecord = await http.post(apiEndpoint,testRecord);
     return newTestRecord;
 }
 
+export async function getCurrentTests() {
+    const apiEndpoint = apiUrl + "/currentTests";
+    const userTestRecords = await http.post(apiEndpoint);
+    return userTestRecords;
+}
+
 export default {
-    getTestRecords
+    getCurrentTests,
+    getTestRecords,
+    postTestRecord,
 }
