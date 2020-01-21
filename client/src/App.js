@@ -4,7 +4,7 @@ import Signup from "./pages/Signup/signup";
 import Login from "./pages/Login/login";
 import Test from "./pages/Test/test";
 import TestList from "./pages/TestList/testList";
-import Navbar from "./components/Navbar/navbar";
+import Navbar from "./components/Navbar/p2-navbar.js";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import Logout from "./components/Logout/logout";
