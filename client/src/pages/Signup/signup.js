@@ -33,7 +33,7 @@ const Signup = () => {
         <h2>Welcome to the SembraCare Employee Portal!</h2>
       </div>
       <form onSubmit={handleSubmit}>
-        <Container className="mt-3 px-5">
+        <Container>
           <Row className="form-group">
             <Col size="12">
               <input
@@ -67,7 +67,7 @@ const Signup = () => {
               />
             </Col>
           </Row>
-          <button className="btn btn-success" type="submit">
+          <button className="btn-submit-signUp" type="submit">
             Submit
           </button>
         </Container>

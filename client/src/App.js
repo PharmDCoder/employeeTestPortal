@@ -40,7 +40,7 @@ function App() {
     <Router>
       <div>
         <Navbar user={userData} />
-        <Greeting user={userData}/>
+        <Greeting user={userData} />
         <Wrapper>
           {userData && (<Route exact path="/"
             render={props => <TestList {...props} user={userData} currentTests={currentTests} />}
