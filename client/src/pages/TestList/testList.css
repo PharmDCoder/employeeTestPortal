@@ -1,16 +1,20 @@
 
-/* body {
-    width: 100%;
-} */
 
 .btnLink {
-    color:#ffffff;
-    padding: 0;
+    font-weight: bold;
+    color: white;
 }
 
 div .form-group {
     border: none;
 }
+
+.btn {
+    width: 100%;
+}
+
+
+
 
 
 
