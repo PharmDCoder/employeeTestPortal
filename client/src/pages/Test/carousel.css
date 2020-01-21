@@ -14,6 +14,7 @@
 } */
 
 .title {
+  /* color: blue; */
   font-size: 4em;
   text-align: center;
 }
@@ -46,25 +47,27 @@
 }
 
 .wrapper h3 {
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: 800;
   /* margin-bottom: 10%; */
 }
 
 .wrapper h6 {
+  color: blue;
   font-size: 2em;
   font-weight: 600;
-  margin-bottom: 10%;
+  /* margin-bottom: 10%; */
 }
 
 .wrapper p {
-  font-size: 1.75em;
+  font-size: 1em;
   font-weight: 500;
   margin-bottom: 2%;
   line-height: 1.5em;
 }
 
 .radio-inline {
+  font-size: 1.5em;
   width: 100%;
 }
 
@@ -82,9 +85,10 @@ label input {
   width: 60%;
 } */
 
-.btn-next {
+.btn-next, .btn-submit {
   background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
   padding: 3%;
   width: 40%;
+  margin-bottom: 2%;
 }
 

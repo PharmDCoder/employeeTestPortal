@@ -107,7 +107,7 @@ const Test = ({ location, currentTests, user }) => {
 
   return (
     <MDBContainer className="carousel-container">
-      <h1 className="title">{Hipaa.title}</h1>
+      {/* <h1 className="title">{Hipaa.title}</h1> */}
       <MDBCarousel
         className="z-depth-1 carousel"
         activeItem={1}
