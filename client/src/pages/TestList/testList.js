@@ -18,7 +18,7 @@ const TestList = ({ user, currentTests }) => {
       <Container className="table-storage">
         <Row className="form-group">
           <Col size="12">
-            <table className="table">
+            <table className="table table-sm">
               <thead>
                 <tr>
                   <th scope="col">Test Name</th>

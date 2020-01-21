@@ -4,7 +4,7 @@ import "./p2-navbar.css";
 
 const NavBar = ({ user }) => {
   return (
-      <nav className="custom-navbar navbar-light justify-content-center">
+      <nav className="custom-navbar navbar-light justify-content-left">
 
       <button
         className="navbar-toggler custom-toggler"
@@ -91,13 +91,16 @@ const NavBar = ({ user }) => {
           )}
         </ul>
       </div>
+      </nav>
 
-      <Link className="navbar-brand" to="/">
-        <p>{user && "SembraCare Portal - Hello " + user.employeeName}
-        {!user && "SembraCare Portal"}</p>
-      </Link>
+      // {/* <Link className="navbar-brand" to="/">
+      //   {/* <p>{user && "SembraCare Portal - Hello " + user.employeeName}
+      //   {!user && "SembraCare Portal"}</p> */}
+      //   <p>{user && "SembraCare Portal"}</p>
+      //     <p className="text-center">{user && "Hello " + user.employeeName + "!"}</p>
+      //   <p>{!user && "SembraCare Portal"}</p>
+      // </Link> */}
       
-    </nav>
   );
 };
 

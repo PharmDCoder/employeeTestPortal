@@ -11,6 +11,7 @@ import Logout from "./components/Logout/logout";
 import auth from "./services/authService";
 import testRecords from "./services/testService";
 import "./App.css";
+import Greeting from "./components/Greeting/greeting";
 
 function App() {
   const [userData, setUserData] = useState();
@@ -39,6 +40,7 @@ function App() {
     <Router>
       <div>
         <Navbar user={userData} />
+        <Greeting user={userData}/>
         <Wrapper>
           {userData && (<Route exact path="/"
             render={props => <TestList {...props} user={userData} currentTests={currentTests} />}
