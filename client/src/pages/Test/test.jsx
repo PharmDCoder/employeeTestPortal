@@ -145,11 +145,11 @@ const Test = ({ location, currentTests, user }) => {
                     })
                   }
                   <hr />
-                  {!finalizeTest && (<button className="btn btn-primary" onClick={handleNext}>Next</button>)}
+                  {!finalizeTest && (<button className="btn-next" onClick={handleNext}>Next</button>)}
                   {finalizeTest && (
                     <React.Fragment>
                       <h6>You scored a: {100 * correctAnswerCount / (correctAnswerCount + wrongAnswerCount)}%</h6>
-                      <button className="btn btn-success" onClick={handleSubmit}>Submit Test</button>
+                      <button className="btn-submit" onClick={handleSubmit}>Submit Test</button>
                     </React.Fragment>
                   )}
                 </MDBView>

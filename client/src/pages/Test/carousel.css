@@ -30,24 +30,25 @@
   /* margin-bottom: 10%; */
 }
 
-.carousel-indicators li {
-  /* border: 5px solid red; */
-  background-color: blue;
-  height: 20px;
-  width: 20px;
+.carousel-indicators :not(active) {
+  /* opacity: 100%; */
+  border: 3px solid blue !important;
+  min-height: 20px;
+  max-width: 20px;
+  border-radius: 50px; 
 }
 
 .carousel-indicators .active {
-  border: 2px solid blue;
+  background-color: blue;
   height: 20px;
   width: 20px;
-  /* background-color: #f00; */
+  border-radius: 50px;
 }
 
 .wrapper h3 {
-  font-size: 2em;
+  font-size: 1em;
   font-weight: 800;
-  margin-bottom: 10%;
+  /* margin-bottom: 10%; */
 }
 
 .wrapper h6 {
@@ -63,12 +64,27 @@
   line-height: 1.5em;
 }
 
-button {
+.radio-inline {
+  width: 100%;
+}
+
+label input {
+  margin-right: 2%;
+}
+
+/* .hr {
+  color: blue;
+} */
+
+/* button {
   font-size: 2em;
   padding: 3%;
   width: 60%;
+} */
+
+.btn-next {
+  background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
+  padding: 3%;
+  width: 40%;
 }
 
-embed {
-  height: 600px;
-}
