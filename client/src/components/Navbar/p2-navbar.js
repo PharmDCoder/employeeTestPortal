@@ -4,7 +4,7 @@ import "./p2-navbar.css";
 
 const NavBar = ({ user }) => {
   return (
-    <nav className="navbar navbar-light navbar-5 white justify-content-center">
+      <nav className="custom-navbar navbar-light justify-content-center">
 
       <button
         className="navbar-toggler custom-toggler"
