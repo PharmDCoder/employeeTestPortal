@@ -3,7 +3,8 @@ import Container from "../../components/Container";
 import Col from "../../components/Col";
 import Row from "../../components/Row";
 import auth from "../../services/authService"
-import './login.css';
+// import './login.css';
+import '../Signup/signup.css';
 
 const Login = () => {
   const [email, setemail] = useState();
@@ -64,10 +65,10 @@ const Login = () => {
             Submit
           </button>
         </Container>
-        <Container className="mt-4 personalized-greeting">
+        {/* <Container className="mt-4 personalized-greeting">
           <h3>Hello {email}!</h3>
           <p>I probably shouldn't tell you this, but your password is {password}!</p>
-        </Container>
+        </Container> */}
       </form>
     </div>
   );

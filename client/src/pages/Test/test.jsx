@@ -10,6 +10,7 @@ import {
 import Hipaa from "../../constants/materials.js";
 import "./carousel.css";
 import testService from "../../services/testService"
+import ADL from '../../components/TestingTests/adl.js';
 
 const Test = ({ location, currentTests, user }) => {
   const [currentTest, setCurrentTest] = useState();
@@ -111,7 +112,7 @@ const Test = ({ location, currentTests, user }) => {
       <MDBCarousel
         className="z-depth-1 carousel"
         activeItem={1}
-        length={2}
+        length={3}
         showControls={true}
         showIndicators={true}
         interval={false}
@@ -157,11 +158,11 @@ const Test = ({ location, currentTests, user }) => {
               }
             </MDBCarouselItem>
 
-            {/* <MDBCarouselItem itemId="3">
+            <MDBCarouselItem itemId="3">
               <MDBView>
-                <embed src="../TESTING.pdf"></embed>
+                <ADL />
               </MDBView>
-            </MDBCarouselItem> */}
+            </MDBCarouselItem>
           </MDBCarouselInner>
         </div>
       </MDBCarousel>

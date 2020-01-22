@@ -71,10 +71,10 @@ const Signup = () => {
             Submit
           </button>
         </Container>
-        <Container className="mt-4 personalized-greeting">
+        {/* <Container className="mt-4 personalized-greeting">
           <h3>Hello {employeeName}!</h3>
           <p>I probably shouldn't tell you this, but your password is {password}!</p>
-        </Container>
+        </Container> */}
       </form>
     </div>
   );
