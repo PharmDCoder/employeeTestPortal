@@ -3,8 +3,8 @@ import Container from "../../components/Container";
 import Col from "../../components/Col";
 import Row from "../../components/Row";
 import auth from "../../services/authService"
-// import './login.css';
-import '../Signup/signup.css';
+import './login.css';
+// import '../Signup/signup.css';
 
 const Login = () => {
   const [email, setemail] = useState();
@@ -34,11 +34,11 @@ const Login = () => {
 
   return (
     <div>
-      <div className="mt-4 welcome">
+      <div className="mt-4 login-welcome">
         <h2>Welcome to the SembraCare Employee Portal!</h2>
       </div>
       <form onSubmit={handleSubmit}>
-        <Container className="mt-3 px-5">
+        <Container className="mt-3">
           <Row className="form-group">
             <Col size="12">
               <input
@@ -61,7 +61,7 @@ const Login = () => {
               />
             </Col>
           </Row>
-          <button className="btn" type="submit">
+          <button className="btn-submit-login" type="submit">
             Submit
           </button>
         </Container>

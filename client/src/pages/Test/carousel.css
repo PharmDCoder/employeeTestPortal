@@ -23,12 +23,19 @@
   text-align: center;
    /* border: 2px solid green;  */
    margin-bottom: 10%; 
+   padding-top: 15%;
 }
 
 .carousel-content {
   /* border: 2px solid purple; */
   padding-bottom: 15%;
   /* margin-bottom: 10%; */
+}
+
+.carousel-indicators {
+  position:fixed;
+  top:0;
+  right:50;
 }
 
 .carousel-indicators :not(active) {
