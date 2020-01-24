@@ -1,8 +1,8 @@
 
 
-.greeting p {
+.greeting h2 {
   color: blue;
-  font-size: 2em;
-  margin-bottom: 2%;
+  /* font-size: 2em; */
+  /* margin-bottom: 2%; */
   font-weight: bold;
 }
