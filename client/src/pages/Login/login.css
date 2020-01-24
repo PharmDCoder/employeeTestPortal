@@ -7,21 +7,21 @@ html {
   min-height: 100%;
 }
 
-body {
+/* body {
   width: inherit;
   min-height: inherit;
   margin: 0;
   padding-right: 0;
-}
+} */
 
 .welcome {
   /* border: 1px solid purple; */
-  text-align: center;
 }
 
-.welcome h2 {
+.login-welcome h2 {
   color: blue;
-  padding: 0 2%;
+  padding: 1%;
+  text-align: center;
 }
 
 form {
@@ -46,21 +46,21 @@ form {
   background-color: gold;
 }
 
-.btn:focus {
+.btn-submit-login {
+  background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
+  padding: 3%;
+  width: 40%;
+  border-radius: 10%;
+}
+
+.btn-submit-login:focus {
   background-color: blue;
   color: white;
-  border: none;
 }
 
-.btn:active {
-  color: white;
-  background: blue;
-  border: none;
-}
-
-.personalized-greeting {
+/* .personalized-greeting {
   color: blue;
-}
+} */
 
 
 

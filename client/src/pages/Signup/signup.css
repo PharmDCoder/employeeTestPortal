@@ -14,14 +14,14 @@ body {
   /* padding-right: 0; */
 }
 
-.welcome {
+.signUp-welcome {
   /* border: 1px solid purple; */
   text-align: center;
 }
 
-.welcome h2 {
+.signUp-welcome h2 {
   color: blue;
-  /* padding: 0 2%; */
+  padding: 1%;
 }
 
 form {
@@ -47,16 +47,18 @@ form {
   background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
   padding: 3%;
   width: 40%;
+  border-radius: 10%;
 }
+
 
 .btn-submit-signUp:focus {
   background-color: blue;
   color: white;
 }
 
-.personalized-greeting {
+/* .personalized-greeting {
   color: blue;
-}
+} */
 
 
 

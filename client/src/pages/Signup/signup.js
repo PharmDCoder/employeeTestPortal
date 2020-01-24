@@ -5,6 +5,8 @@ import Row from "../../components/Row";
 import * as userService from '../../services/userService';
 import auth from "../../services/authService"
 import './signup.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const Signup = () => {
   const [email, setemail] = useState();
@@ -28,8 +30,8 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <div className="mt-4 welcome">
+    <div className="text-center">
+      <div className="mt-4 signUp-welcome">
         <h2>Welcome to the SembraCare Employee Portal!</h2>
       </div>
       <form onSubmit={handleSubmit}>

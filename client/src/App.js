@@ -5,7 +5,7 @@ import Login from "./pages/Login/login";
 import Test from "./pages/Test/test";
 import TestList from "./pages/TestList/testList";
 import Navbar from "./components/Navbar/p2-navbar.js";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/footer";
 import Wrapper from "./components/Wrapper";
 import Logout from "./components/Logout/logout";
 import auth from "./services/authService";
@@ -40,7 +40,7 @@ function App() {
     <Router>
       <div>
         <Navbar user={userData} />
-        <Greeting user={userData} />
+        {/* <Greeting user={userData} /> */}
         <Wrapper>
           {userData && (<Route exact path="/"
             render={props => <TestList {...props} user={userData} currentTests={currentTests} />}
