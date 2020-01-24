@@ -36,7 +36,7 @@ nav .navbar-nav li {
 }
 
 nav .navbar-nav li a {
-  color: white !important;
+  color: #C0C0C0 !important;
   font-family: "Oswald", sans-serif;
   font-size: 1.25em;
   font-weight: 800;
@@ -49,7 +49,7 @@ nav .navbar-nav li a {
 }
 
 ul {
-  background: blue;
+  background: #002357cc;
   padding-top: 3%;
   padding-bottom: 3%;
   margin-top: 3%;
