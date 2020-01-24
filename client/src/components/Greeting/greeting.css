@@ -1,10 +1,11 @@
 
 
-.greeting h3 {
+.greeting h2 {
+  font-family: "Oswald", sans-serif;
   /* color: #002357cc; */
   color: #C0C0C0;
-  font-size: 1.75em;
-  margin-bottom: 5%;
-  margin-top: 5%;
+  font-size: 2em;
+  margin-bottom: 3%;
+  margin-top: 2%;
   font-weight: bold;
 }
