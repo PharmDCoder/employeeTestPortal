@@ -4,6 +4,7 @@ import Col from "../../components/Col";
 import Row from "../../components/Row";
 import { Link } from "react-router-dom";
 import "./testList.css";
+import Greeting from "../../components/Greeting/greeting";
 
 const TestList = ({ user, currentTests }) => {
   const checkTestRecord = test => {
@@ -15,6 +16,7 @@ const TestList = ({ user, currentTests }) => {
 
   return (
     <div>
+      <Greeting user={user} />
       <Container className="table-storage">
         <Row className="form-group">
           <Col size="12">

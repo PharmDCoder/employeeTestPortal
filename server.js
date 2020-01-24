@@ -1,17 +1,17 @@
 const path = require("path");
 const express = require("express");
-var cors = require('cors')
+var cors = require("cors");
 const app = express();
-var whitelist = ['http://localhost:3000']
+var whitelist = ["http://localhost:3000"];
 var corsOptions = {
-  origin: function (origin, callback) {
+  origin: function(origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'))
+      callback(new Error("Not allowed by CORS"));
     }
   }
-}
+};
 // app.use(cors(corsOptions));
 app.use(cors());
 
@@ -26,15 +26,13 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
-// Send every request to the React app
-// Define any API routes before this runs
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
-
-
 app.use(routes);
 
+// Send every request to the React app
+// Define any API routes before this runs
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -42,9 +40,11 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //connect to mongoDB
-mongoose.connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect(MONGODB_URI, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true
+});
 
-
-app.listen(PORT, function () {
-  console.log('🌎 ==> API server now on port: ' + PORT);
+app.listen(PORT, function() {
+  console.log("🌎 ==> API server now on port: " + PORT);
 });
