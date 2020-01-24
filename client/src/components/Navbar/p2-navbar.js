@@ -20,7 +20,7 @@ const NavBar = ({ user }) => {
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent15">
         <ul className="navbar-nav text-center">
-          <li className="nav-item">
+          <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <Link
               to="/"
               className={
@@ -28,14 +28,14 @@ const NavBar = ({ user }) => {
                 window.location.pathname === "/home"
                   ? "nav-link active"
                   : "nav-link"
-              }
+              }      
             >
               Home
             </Link>
           </li>
           {!user && (
             <React.Fragment>
-              <li className="nav-item">
+              <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                 <Link
                   to="/signup"
                   className={
@@ -47,7 +47,7 @@ const NavBar = ({ user }) => {
                   Sign Up
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                 <Link
                   to="/login"
                   className={
@@ -63,7 +63,7 @@ const NavBar = ({ user }) => {
           )}
           {user && (
             <React.Fragment>
-              <li className="nav-item">
+              <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                 <Link
                   to="/logout"
                   className={
@@ -75,7 +75,7 @@ const NavBar = ({ user }) => {
                   Log Out
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                 <Link
                   to="/testlist"
                   className={
