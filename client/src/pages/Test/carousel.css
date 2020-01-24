@@ -36,6 +36,8 @@
   position:fixed;
   top:0;
   right:50;
+  max-height: 5%;
+  margin-top: 5%;
 }
 
 .carousel-indicators :not(active) {
