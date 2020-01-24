@@ -1,10 +1,13 @@
 import React from "react";
-import "./style.css";
+import "./footer.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Footer() {
   return (
     <footer className="footer">
-      <span>Wikipedia Searcher</span>
+      <p className="footer-title">SembraCare</p>
+      <p>4000 Blue Ridge Rd #100, Raleigh, NC 27612</p>
+      {/* <span>Wikipedia Searcher</span> */}
     </footer>
   );
 }
