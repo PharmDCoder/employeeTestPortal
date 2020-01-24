@@ -11,7 +11,6 @@ import Logout from "./components/Logout/logout";
 import auth from "./services/authService";
 import testRecords from "./services/testService";
 import "./App.css";
-import Greeting from "./components/Greeting/greeting";
 
 function App() {
   const [userData, setUserData] = useState();
@@ -40,23 +39,40 @@ function App() {
     <Router>
       <div>
         <Navbar user={userData} />
-        {/* <Greeting user={userData} /> */}
         <Wrapper>
-          {userData && (<Route exact path="/"
-            render={props => <TestList {...props} user={userData} currentTests={currentTests} />}
-          />)
-          }
-          {!userData && (
-            <Route exact path="/login" component={Login} />
-          )
-          }
-          <Route exact path="/test"
-            render={props => <Test {...props} user={userData} currentTests={currentTests} />}
+          {userData && (
+            <Route
+              exact
+              path="/"
+              render={props => (
+                <TestList
+                  {...props}
+                  user={userData}
+                  currentTests={currentTests}
+                />
+              )}
+            />
+          )}
+          {!userData && <Route exact path="/login" component={Login} />}
+          <Route
+            exact
+            path="/test"
+            render={props => (
+              <Test {...props} user={userData} currentTests={currentTests} />
+            )}
           />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/testlist"
-            render={props => <TestList {...props} user={userData} currentTests={currentTests} />}
+          <Route
+            exact
+            path="/testlist"
+            render={props => (
+              <TestList
+                {...props}
+                user={userData}
+                currentTests={currentTests}
+              />
+            )}
           />
           <Route exact path="/logout" component={Logout} />
         </Wrapper>
