@@ -4,6 +4,7 @@ import Signup from "./pages/Signup/signup";
 import Login from "./pages/Login/login";
 import Test from "./pages/Test/test";
 import TestList from "./pages/TestList/testList";
+import TestLanding from "./pages/TestLanding/testLanding"
 import Navbar from "./components/Navbar/p2-navbar.js";
 import Footer from "./components/Footer/footer";
 import Wrapper from "./components/Wrapper";
@@ -38,7 +39,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Navbar user={userData} />
+        {userData && <Navbar user={userData} />}
         <Wrapper>
           {userData && (
             <Route
@@ -53,12 +54,19 @@ function App() {
               )}
             />
           )}
-          {!userData && <Route exact path="/login" component={Login} />}
+          {!userData && <Route exact path="/" component={Login} />}
           <Route
             exact
             path="/test"
             render={props => (
-              <Test {...props} user={userData} currentTests={currentTests} />
+              <Test {...props} user={userData} />
+            )}
+          />
+          <Route
+            exact
+            path="/testLanding"
+            render={props => (
+              <TestLanding {...props} user={userData} currentTests={currentTests} />
             )}
           />
           <Route exact path="/signup" component={Signup} />

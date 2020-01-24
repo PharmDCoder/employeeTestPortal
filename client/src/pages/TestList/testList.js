@@ -3,8 +3,8 @@ import Container from "../../components/Container";
 import Col from "../../components/Col";
 import Row from "../../components/Row";
 import { Link } from "react-router-dom";
-import "./testList.css";
 import Greeting from "../../components/Greeting/greeting";
+import "./testList.css";
 
 const TestList = ({ user, currentTests }) => {
   const checkTestRecord = test => {
@@ -52,21 +52,11 @@ const TestList = ({ user, currentTests }) => {
                               View
                             </button>
                           ) : (
-                            <button
-                              key={test._id + "btn2"}
-                              className="btn btn-primary"
-                            >
-                              <Link
-                                key={test._id + "link2"}
-                                to={{
-                                  pathname: "/test",
-                                  state: { testid: test._id }
-                                }}
-                                className="btnLink"
-                              >
-                                Start
-                              </Link>
-                            </button>
+                            <Link key={test._id + "link2"} to={{ pathname: "/testLanding", state: { testid: test._id } }} className="btnLink">
+                              <button key={test._id + "btn2"} className="btn btn-primary">          
+                                  Start     
+                              </button>
+                            </Link>
                           )}
                         </td>
                       </tr>
