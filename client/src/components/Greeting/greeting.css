@@ -1,8 +1,9 @@
 
 
-.greeting h2 {
+.greeting h3 {
   color: blue;
-  /* font-size: 2em; */
-  /* margin-bottom: 2%; */
+  font-size: 1.75em;
+  margin-bottom: 0;
+  margin-top: 1%;
   font-weight: bold;
 }
