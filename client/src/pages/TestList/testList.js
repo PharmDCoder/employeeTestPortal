@@ -16,7 +16,7 @@ const TestList = ({ user, currentTests }) => {
 
   return (
     <div>
-      <Greeting user={user} />
+      <Greeting className="greeting" user={user} />
       <Container className="table-storage">
         <Row className="form-group">
           <Col size="12">
