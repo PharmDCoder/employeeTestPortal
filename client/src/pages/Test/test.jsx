@@ -12,7 +12,7 @@ import "./test.css";
 import testService from "../../services/testService";
 // import ADL from '../../components/TestingTests/adl.js';
 
-const Test = ({ location, currentTests, user }) => {
+const Test = ({ location, user }) => {
   const [currentTest, setCurrentTest] = useState();
   const [currentQuestionObject, setCurrentQuestionObject] = useState();
   const [correctAnswerCount, setCorrectAnswerCount] = useState();
@@ -21,16 +21,14 @@ const Test = ({ location, currentTests, user }) => {
 
   useEffect(() => {
     try {
-      let testLoad = currentTests.filter(test => {
-        return test._id === location.state.testid;
-      });
-      testLoad[0].testQuestions = shuffleFunction(testLoad[0].testQuestions);
+      const test = location.state.test;
+      test.testQuestions = shuffleFunction(test.testQuestions);
 
-      setCurrentTest(testLoad);
+      setCurrentTest(test);
       setCurrentQuestionObject({
-        currentQuestion: testLoad[0].testQuestions[0],
+        currentQuestion: test.testQuestions[0],
         currentQuestionIndex: 0,
-        currentQuestionOptions: scrambleOptions(testLoad[0].testQuestions[0]),
+        currentQuestionOptions: scrambleOptions(test.testQuestions[0]),
         selectedAnswer: ""
       });
       setCorrectAnswerCount(0);
@@ -102,9 +100,9 @@ const Test = ({ location, currentTests, user }) => {
     if (currentQuestionIndex + 1 < 10) {
       setCurrentQuestionObject({
         currentQuestionIndex: currentQuestionIndex + 1,
-        currentQuestion: currentTest[0].testQuestions[currentQuestionIndex + 1],
+        currentQuestion: currentTest.testQuestions[currentQuestionIndex + 1],
         currentQuestionOptions: scrambleOptions(
-          currentTest[0].testQuestions[currentQuestionIndex + 1]
+          currentTest.testQuestions[currentQuestionIndex + 1]
         ),
         selectedAnswer: ""
       });
@@ -129,7 +127,7 @@ const Test = ({ location, currentTests, user }) => {
         testScore: currentTestScore,
         testPass: currentTestScore >= 70,
         testDate: new Date(),
-        testID: currentTest[0]._id
+        testID: currentTest._id
       };
       testService.postTestRecord(testRecord, user.id);
 
