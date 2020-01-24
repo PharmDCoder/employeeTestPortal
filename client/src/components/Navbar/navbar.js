@@ -4,8 +4,7 @@ import "./navbar.css";
 
 const NavBar = ({ user }) => {
   return (
-      <nav className="custom-navbar navbar-light justify-content-left">
-
+    <nav className="custom-navbar navbar-light justify-content-left">
       <button
         className="navbar-toggler custom-toggler"
         type="button"
@@ -35,7 +34,11 @@ const NavBar = ({ user }) => {
           </li>
           {!user && (
             <React.Fragment>
-              <li className="nav-item">
+              <li
+                className="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
                 <Link
                   to="/signup"
                   className={
@@ -47,7 +50,11 @@ const NavBar = ({ user }) => {
                   Sign Up
                 </Link>
               </li>
-              <li className="nav-item">
+              <li
+                className="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
                 <Link
                   to="/login"
                   className={
@@ -63,7 +70,11 @@ const NavBar = ({ user }) => {
           )}
           {user && (
             <React.Fragment>
-              <li className="nav-item">
+              <li
+                className="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
                 <Link
                   to="/logout"
                   className={
@@ -75,7 +86,11 @@ const NavBar = ({ user }) => {
                   Log Out
                 </Link>
               </li>
-              <li className="nav-item">
+              <li
+                className="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
                 <Link
                   to="/testlist"
                   className={
@@ -91,16 +106,15 @@ const NavBar = ({ user }) => {
           )}
         </ul>
       </div>
-      </nav>
+    </nav>
 
-      // {/* <Link className="navbar-brand" to="/">
-      //   {/* <p>{user && "SembraCare Portal - Hello " + user.employeeName}
-      //   {!user && "SembraCare Portal"}</p> */}
-      //   <p>{user && "SembraCare Portal"}</p>
-      //     <p className="text-center">{user && "Hello " + user.employeeName + "!"}</p>
-      //   <p>{!user && "SembraCare Portal"}</p>
-      // </Link> */}
-      
+    // {/* <Link className="navbar-brand" to="/">
+    //   {/* <p>{user && "SembraCare Portal - Hello " + user.employeeName}
+    //   {!user && "SembraCare Portal"}</p> */}
+    //   <p>{user && "SembraCare Portal"}</p>
+    //     <p className="text-center">{user && "Hello " + user.employeeName + "!"}</p>
+    //   <p>{!user && "SembraCare Portal"}</p>
+    // </Link> */}
   );
 };
 
