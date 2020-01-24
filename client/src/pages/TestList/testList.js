@@ -11,7 +11,7 @@ const TestList = ({ user, currentTests }) => {
     const foundRecord = user.testrecord.filter(testRecord => {
       return testRecord.testID === test._id;
     });
-    return foundRecord.length > 0;
+    return foundRecord;
   };
 
   return (
@@ -22,10 +22,10 @@ const TestList = ({ user, currentTests }) => {
           <Col size="12">
             <table className="table table-sm">
               <thead>
-                <tr>
+                <tr className="text-center">
                   <th scope="col">Test Name</th>
-                  <th scope="col">Due Date</th>
-                  <th scope="col">Status</th>
+                  <th scope="col">Due</th>
+                  <th scope="col">Grade</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
@@ -34,17 +34,18 @@ const TestList = ({ user, currentTests }) => {
                   user &&
                   currentTests.map((test, index) => {
                     let foundRecord = checkTestRecord(test);
+                    console.log(foundRecord)
                     return (
-                      <tr key={test._id + "1"}>
-                        <th scope="row" key={test._id + "2"}>
+                      <tr key={test._id + "1"} className="text-center">
+                        <th scope="row" key={test._id + "2"} className="align-middle">
                           {test.testName}
                         </th>
-                        <td key={test._id + "3"}>1/1/21</td>
-                        <td key={test._id + "4"}>
-                          {foundRecord ? "Complete" : "Incomplete"}
+                        <td key={test._id + "3"} className="align-middle">1/1/21</td>
+                        <td key={test._id + "4"} className="align-middle">
+                          {foundRecord.length > 0 ? foundRecord[0].testScore + "%" : "-"}
                         </td>
-                        <td key={test._id + "5"}>
-                          {foundRecord ? (
+                        <td key={test._id + "5"} className="align-middle">
+                          {foundRecord.length > 0 ? (
                             <button
                               key={test._id + "btn1"}
                               className="btn btn-success"
