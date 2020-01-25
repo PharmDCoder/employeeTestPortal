@@ -1,24 +1,9 @@
-/* body {
-  padding-top: 5%;
-} */
-
-/* .wrapper {
-  width: 100%;
-  border: 3px solid red;
-  min-height: 600px;
-  max-height: 600px;
-  overflow: scroll;
-} */
-/* ::-webkit-scrollbar {
-  display: none;
-} */
 
 .carousel-container {
   /* border: 2px solid black; */
   border-top: 15px solid #002357cc;
   margin-top: 3%;
   padding-top: 8%;
-  /* padding: 15% 0 15% 0; */
   background: #C0C0C0;
   height: 575px;
 }
@@ -46,39 +31,31 @@
    overflow-y: scroll;
 }
 
-@media only screen and (min-width: 758px) {
+/* @media only screen and (min-width: 758px) {
   body { 
     background-color: red;
   }
   .carousel-container {
-    /* border: 2px solid black; */
     border-top: 15px solid #002357cc;
     margin-top: 3%;
     padding-top: 8%;
-    /* padding: 15% 0 15% 0; */
     background: #C0C0C0;
     height: 575px;
   }
 
   .carousel {
     text-align: center;
-     /* border: 3px solid green;  */
      border-top: 8px solid #002357cc;
      border-bottom: 8px solid #002357cc;
      border-radius: 5%;
-     /* margin-bottom: 10%;  */
      padding-top: 15%;
      background: white;
      height: 500px;
-     overflow-y: scroll;
   }
-
-}
+} */
 
 .carousel-content {
-  /* border: 2px solid purple; */
   padding-bottom: 5%;
-  /* margin-bottom: 10%; */
 }
 
 .carousel-indicators {
@@ -107,14 +84,12 @@
 .wrapper h3 {
   font-size: 1.5em;
   font-weight: 800;
-  /* margin-bottom: 10%; */
 }
 
 .wrapper h6 {
   color: blue;
   font-size: 2em;
   font-weight: 600;
-  /* margin-bottom: 10%; */
 }
 
 .wrapper p {
@@ -133,20 +108,12 @@ label input {
   margin-right: 2%;
 }
 
-/* .hr {
-  color: blue;
-} */
-
-/* button {
-  font-size: 2em;
-  padding: 3%;
-  width: 60%;
-} */
-
-.btn-next, .btn-submit {
+.btn-next, 
+.btn-submit {
   background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
   padding: 3%;
   width: 40%;
   margin-bottom: 2%;
+  border-radius: 10%;
 }
 

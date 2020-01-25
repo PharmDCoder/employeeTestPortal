@@ -18,7 +18,7 @@ const TestList = ({ user, currentTests }) => {
     <div>
       <Greeting className="greeting" user={user} />
       <Container className="table-storage">
-        <Row className="form-group">
+        <Row className="testList-form-group">
           <Col size="12">
             <table className="table table-sm">
               <thead>
