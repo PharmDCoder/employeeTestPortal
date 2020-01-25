@@ -34,26 +34,26 @@ const Login = () => {
 
   return (
     <div>
-      <div className="mt-4 login-welcome">
+      <div className="login-welcome">
         <h2>Welcome to the SembraCare Employee Portal!</h2>
       </div>
-      <form onSubmit={handleSubmit}>
-        <Container className="mt-3">
-          <Row className="form-group">
+      <form className="login-form text-center" onSubmit={handleSubmit}>
+        <Container>
+          <Row className="login-form-group">
             <Col size="12">
               <input
-                className="form-control"
+                className="login-form-control"
                 type="text"
-                placeholder="email"
+                placeholder="Email"
                 name="email"
                 onChange={e => setemail(e.target.value)}
               />
             </Col>
           </Row>
-          <Row className="form-group">
+          <Row className="login-form-group">
             <Col size="12">
               <input
-                className="form-control"
+                className="login-form-control"
                 type="password"
                 placeholder="Password"
                 name="password"
