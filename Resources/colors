@@ -1,13 +1,32 @@
-
-
 Gray
 #C0C0C0
 
+Lighter Blue (royal)
+#0000c2
+
 Dark Blue
-#002357cc
+#002357
 
 Light Gold
 #eee243
 
 Dark Gold
 #aa8b00
+
+media query base code 
+
+/* (iPhone X) */
+@media only screen and (max-width: 375px) {
+}
+
+/* (iphone 6/7/8 plus) */
+@media only screen and (min-width: 415px) and (max-width: 768px) {
+}
+
+/* (iPad) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* (iPad Pro) */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+}
