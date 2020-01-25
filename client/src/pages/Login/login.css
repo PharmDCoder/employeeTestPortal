@@ -42,10 +42,14 @@ html {
 
 .btn-submit-login {
   background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
+  font-weight: 800;
+  font-size: 1.5em;
   padding: 3%;
-  width: 40%;
+  width: 50%;
   border-radius: 10%;
   margin-top: 2%;
+  border: 1px solid #002357;
+  box-shadow: 5px 10px 10px #002357;
 }
 
 .btn-submit-login:focus {
@@ -54,16 +58,84 @@ html {
 }
 
 /* **********  MEDIA QUERIES  ******** */
+/* (iPhone X) */
 @media only screen and (max-width: 375px) {
+  .login-form {
+    border-top: 40px solid #002357;
+    margin-top: 10%;
+    height: 425px;
+    padding-top: 15%;
+  }
+
+  .login-form-control {
+    height: 3.5em;
+  }
+
+  .btn-submit-login {
+    margin-top: 10%;
+    width: 60%;
+  }
 }
 
-@media only screen and (min-width: 415px) and (max-width: 768px) {
+/* (iPhone 6/7/8 plus) */
+@media only screen and (min-width: 414px) and (max-width: 768px) {
+  .login-form {
+    border-top: 40px solid #002357;
+    height: 400px;
+    padding-top: 10%;
+  }
+
+  .login-form-control {
+    height: 3.25em;
+  }
+
+  .btn-submit-login {
+    margin-top: 8%;
+  }
 }
 
+/* (ipad) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .login-welcome h2 {
+    font-size: 2.5em;
+  }
+
+  .login-form {
+    border-top: 60px solid #002357;
+    margin-top: 5%;
+    height: 550px;
+  }
+
+  .login-form-control {
+    height: 4em;
+  }
+
+  .btn-submit-login {
+    font-size: 2em;
+    margin-top: 5%;
+  }
 }
 
+/* (ipad pro) */
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .login-welcome {
+    font-size: 1.5em;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+
+  .login-form {
+    border-top: 80px solid #002357;
+    height: 700px;
+  }
+
+  .login-form-control {
+    height: 4.5em;
+  }
+
+  .btn-submit-login {
+    font-size: 2.5em;
+  }
 }
 
 /* ******** TO DO ******** */

@@ -43,6 +43,8 @@ html {
   width: 50%;
   border-radius: 10%;
   margin-top: 2%;
+  border: 1px solid #002357;
+  box-shadow: 5px 10px 10px #002357;
 }
 
 .btn-submit-signup:focus {
