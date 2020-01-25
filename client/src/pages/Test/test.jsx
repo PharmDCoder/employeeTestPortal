@@ -126,7 +126,7 @@ const Test = ({ location, user }) => {
       const testRecord = {
         testScore: currentTestScore,
         testPass: currentTestScore >= 70,
-        testDate: new Date(),
+        testFinish: new Date(),
         testID: currentTest._id
       };
       testService.postTestRecord(testRecord, user.id);
