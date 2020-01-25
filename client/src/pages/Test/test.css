@@ -1,11 +1,11 @@
-
 .carousel-container {
   /* border: 2px solid black; */
-  border-top: 15px solid #002357cc;
+  border-top: 20px solid #002357cc;
   margin-top: 3%;
-  padding-top: 8%;
-  background: #C0C0C0;
-  height: 575px;
+  padding-top: 3%;
+  background: #c0c0c0;
+  min-height: 600px;
+  max-height: 1200px;
 }
 
 ::-webkit-scrollbar {
@@ -20,48 +20,25 @@
 
 .carousel {
   text-align: center;
-   /* border: 3px solid green;  */
-   border-top: 8px solid #002357cc;
-   border-bottom: 8px solid #002357cc;
-   border-radius: 5%;
-   /* margin-bottom: 10%;  */
-   padding: 15% 2% 0 2%;
-   background: white;
-   height: 500px;
-   overflow-y: scroll;
+  /* border: 3px solid green;  */
+  border-top: 8px solid #002357cc;
+  border-bottom: 8px solid #002357cc;
+  border-radius: 5%;
+  /* margin-bottom: 10%;  */
+  padding: 15% 2% 0 2%;
+  background: white;
+  height: 550px;
+  overflow-y: scroll;
 }
-
-/* @media only screen and (min-width: 758px) {
-  body { 
-    background-color: red;
-  }
-  .carousel-container {
-    border-top: 15px solid #002357cc;
-    margin-top: 3%;
-    padding-top: 8%;
-    background: #C0C0C0;
-    height: 575px;
-  }
-
-  .carousel {
-    text-align: center;
-     border-top: 8px solid #002357cc;
-     border-bottom: 8px solid #002357cc;
-     border-radius: 5%;
-     padding-top: 15%;
-     background: white;
-     height: 500px;
-  }
-} */
 
 .carousel-content {
   padding-bottom: 5%;
 }
 
 .carousel-indicators {
-  position:fixed;
-  top:0;
-  right:50;
+  position: fixed;
+  top: 0;
+  right: 50;
   max-height: 5%;
   margin-top: 5%;
 }
@@ -71,7 +48,7 @@
   border: 3px solid #002357cc !important;
   min-height: 20px;
   max-width: 20px;
-  border-radius: 50px; 
+  border-radius: 50px;
 }
 
 .carousel-indicators .active {
@@ -108,7 +85,7 @@ label input {
   margin-right: 2%;
 }
 
-.btn-next, 
+.btn-next,
 .btn-submit {
   background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
   padding: 3%;
@@ -117,3 +94,52 @@ label input {
   border-radius: 10%;
 }
 
+@media only screen and (max-width: 375px) {
+  .carousel-container {
+    height: 550px;
+    margin-top: 8%;
+    padding-top: 5%;
+    /* background-color: red; */
+  }
+
+  .carousel {
+    height: 535px;
+  }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 768px) {
+  .carousel-container {
+    width: 100%;
+    height: 700px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .carousel-container {
+    height: 800px;
+    padding-top: 3%;
+  }
+
+  .carousel {
+    /* background-color: red; */
+    height: 730px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .carousel-container {
+    /* margin-top: 8%; */
+    height: 1000px;
+  }
+
+  .carousel {
+    padding-left: 0;
+    height: 925px;
+  }
+
+  .carousel-content {
+    font-size: 1.5em;
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+}

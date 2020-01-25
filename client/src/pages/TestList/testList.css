@@ -1,14 +1,4 @@
-body {
-  /* *************  ROYAL BLUE ON TOP ************  */
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(50%, #0000c2),
-    color-stop(100%, #002357)
-  );
-  background-attachment: fixed;
-}
+
 
 .btnLink {
   font-weight: bold;
@@ -16,7 +6,6 @@ body {
 }
 
 .table-storage {
-  /* border: 2px solid black; */
   border-top: 20px solid #002357cc;
   height: 480px;
   padding-top: 5%;
@@ -37,4 +26,45 @@ body {
 
 .btn {
   width: 100%;
+}
+
+@media only screen and (max-width: 375px) {
+  .table-storage {
+    height: 550px;
+    margin-top: 8%;
+    /* background-color: red; */
+  }
+
+  .testList-form-group {
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 768px) {
+  .table-storage {
+    height: 700px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .table-storage {
+    height: 750px;
+  }
+
+  .testList-form-group {
+    /* background-color: red; */
+    height: 650px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .table-storage {
+    height: 900px;
+  }
+
+  .testList-form-group {
+    padding-top: 5%;
+    padding-left: 0;
+    height: 750px;
+  }
 }
