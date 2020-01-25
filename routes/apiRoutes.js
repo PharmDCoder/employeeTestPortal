@@ -8,7 +8,7 @@ function signJwt(email, employeeName, employeeId, res) {
     userDataScrubbed.employeeName = employeeName;
     userDataScrubbed.id = employeeId;
 
-    jwt.sign(userDataScrubbed, 'privatekey', { expiresIn: '1h' }, (err, token) => {
+    jwt.sign(userDataScrubbed, 'privatekey', (err, token) => {
         if (err) { console.log(err) }
         res.send(token);
     });

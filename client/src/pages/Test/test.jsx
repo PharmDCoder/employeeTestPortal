@@ -10,6 +10,7 @@ import {
 import Hipaa from "../../constants/materials.js";
 import "./test.css";
 import testService from "../../services/testService";
+import SignatureCanvas from 'react-signature-canvas'
 // import ADL from '../../components/TestingTests/adl.js';
 
 const Test = ({ location, user }) => {
@@ -17,10 +18,13 @@ const Test = ({ location, user }) => {
   const [currentQuestionObject, setCurrentQuestionObject] = useState();
   const [correctAnswerCount, setCorrectAnswerCount] = useState();
   const [wrongAnswerCount, setWrongAnswerCount] = useState();
+  const [startTime, setStartTime] = useState();
+  const [questionList, setQuestionsList] = useState([]);
   const [finalizeTest, setFinalizeTest] = useState(false);
 
   useEffect(() => {
     try {
+      setStartTime(new Date());
       const test = location.state.test;
       test.testQuestions = shuffleFunction(test.testQuestions);
 
@@ -33,8 +37,8 @@ const Test = ({ location, user }) => {
       });
       setCorrectAnswerCount(0);
       setWrongAnswerCount(0);
-    } catch (ex) {}
-  }, []);
+    } catch (ex) { }
+  }, [location]);
 
   function shuffleFunction(testQuestions) {
     for (let i = testQuestions.length - 1; i > 0; i--) {
@@ -73,6 +77,7 @@ const Test = ({ location, user }) => {
 
   const handleNext = async e => {
     e.preventDefault();
+
     const {
       selectedAnswer,
       currentQuestion,
@@ -83,17 +88,38 @@ const Test = ({ location, user }) => {
       alert("Please select an Answer");
       return;
     }
-
+    console.log(startTime);
     if (correctAnswerCount + wrongAnswerCount <= 10) {
       if (selectedAnswer === currentQuestion.questionAnswer) {
         setCorrectAnswerCount(correctAnswerCount + 1);
+        setQuestionsList([...questionList, { 
+          testQuestionText: currentQuestion.questionText, 
+          testQuestionAnswer: currentQuestion.questionAnswer, 
+          testQuestionCorrect: true 
+        }]);
       } else {
         setWrongAnswerCount(wrongAnswerCount + 1);
+        if (currentQuestion.questionOptionsBad.indexOf(selectedAnswer) > -1) {
+          setQuestionsList([...questionList, { 
+            testQuestionText: currentQuestion.questionText, 
+            testQuestionAnswer: currentQuestion.questionAnswer, 
+            testQuestionCorrect: false, 
+            testQuestionBad: true,
+            testQuestionExplanation: currentQuestion.questionExplanation 
+          }]);
+        } else {
+          setQuestionsList([...questionList, { 
+            testQuestionText: currentQuestion.questionText, 
+            testQuestionAnswer: currentQuestion.questionAnswer, 
+            testQuestionCorrect: false, 
+            testQuestionExplanation: currentQuestion.questionExplanation 
+          }]);
+        }
       }
     } else {
       alert(
         "finished - SCORE: " +
-          correctAnswerCount / (correctAnswerCount + wrongAnswerCount)
+        correctAnswerCount / (correctAnswerCount + wrongAnswerCount)
       );
     }
 
@@ -126,8 +152,10 @@ const Test = ({ location, user }) => {
       const testRecord = {
         testScore: currentTestScore,
         testPass: currentTestScore >= 70,
+        testStart: startTime,
         testFinish: new Date(),
-        testID: currentTest._id
+        testID: currentTest._id,
+        testQuestionList: questionList
       };
       testService.postTestRecord(testRecord, user.id);
 
@@ -191,6 +219,7 @@ const Test = ({ location, user }) => {
                       Next
                     </button>
                   )}
+                  {/* <SignatureCanvas canvasProps={{width: 300, height: 200, className: 'sigCanvas'}} /> */}
                   {finalizeTest && (
                     <React.Fragment>
                       <h6>

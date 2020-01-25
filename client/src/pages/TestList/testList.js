@@ -34,7 +34,6 @@ const TestList = ({ user, currentTests }) => {
                   user &&
                   currentTests.map((test, index) => {
                     let foundRecord = checkTestRecord(test);
-                    console.log(foundRecord)
                     return (
                       <tr key={test._id + "1"} className="text-center">
                         <th scope="row" key={test._id + "2"} className="align-middle">

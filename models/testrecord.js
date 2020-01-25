@@ -10,7 +10,10 @@ const testRecordSchema = new Schema({
   testSignature: { type: String, required: false },
   testQuestionList: [
     {
-      testQuestionIndex: Number,
+      testQuestionText: String,
+      testQuestionAnswer: String,
+      testQuestionExplanation: String,
+      testQuestionBad: Boolean,
       testQuestionCorrect: Boolean
     }
   ]
