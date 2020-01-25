@@ -8,7 +8,7 @@ import {
   MDBContainer
 } from "mdbreact";
 import Hipaa from "../../constants/materials.js";
-import "./carousel.css";
+import "./test.css";
 import testService from "../../services/testService";
 // import ADL from '../../components/TestingTests/adl.js';
 
