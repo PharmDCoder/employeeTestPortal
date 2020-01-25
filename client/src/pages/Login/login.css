@@ -7,19 +7,8 @@ html {
   min-height: 100%;
 }
 
-/* body {
-  width: inherit;
-  min-height: inherit;
-  margin: 0;
-  padding-right: 0;
-} */
-
-.welcome {
-  /* border: 1px solid purple; */
-}
-
 .login-welcome {
-  color:#C0C0C0;
+  color: #c0c0c0;
   margin: 8% 0 3% 0;
   padding: 1%;
   text-align: center;
@@ -27,8 +16,8 @@ html {
 
 .login-form {
   /* border: 5px solid red; */
-  border-top: 20px solid #002357cc;
-  background-color: #C0C0C0;
+  border-top: 20px solid #002357;
+  background-color: #c0c0c0;
   height: 300px;
   padding-top: 10%;
 }
@@ -44,7 +33,7 @@ html {
 }
 
 .login-form-control {
-  border: 5px solid #002357cc;
+  border: 5px solid #002357;
   height: 2.75em;
   border-radius: 5%;
   width: 100%;
@@ -64,13 +53,18 @@ html {
   color: white;
 }
 
-/* .personalized-greeting {
-  color: blue;
-} */
+/* **********  MEDIA QUERIES  ******** */
+@media only screen and (max-width: 375px) {
+}
 
+@media only screen and (min-width: 415px) and (max-width: 768px) {
+}
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
 
-
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+}
 
 /* ******** TO DO ******** */
 /* 

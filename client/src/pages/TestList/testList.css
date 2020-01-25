@@ -1,12 +1,10 @@
-
-
 .btnLink {
   font-weight: bold;
   color: white;
 }
 
 .table-storage {
-  border-top: 20px solid #002357cc;
+  border-top: 20px solid #002357;
   height: 480px;
   padding-top: 5%;
   background-color: #c0c0c0;
@@ -14,8 +12,8 @@
 
 .testList-form-group {
   border: none;
-  border-top: 8px solid #002357cc;
-  border-bottom: 8px solid #002357cc;
+  border-top: 8px solid #002357;
+  border-bottom: 8px solid #002357;
   border-radius: 5%;
   height: 420px;
   overflow: scroll;

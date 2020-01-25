@@ -8,16 +8,16 @@ html {
 }
 
 .signup-welcome {
-  color: #C0C0C0;
+  color: #c0c0c0;
   padding: 1%;
-  margin: 5% 0 5% 0;
+  margin: 8% 0 8% 0;
   text-align: center;
 }
 
 .signup-form {
   /* border: 5px solid red;  */
-  border-top: 20px solid #002357cc;
-  background-color: #C0C0C0;
+  border-top: 20px solid #002357;
+  background-color: #c0c0c0;
   height: 350px;
   padding-top: 12%;
 }
@@ -28,7 +28,7 @@ html {
 }
 
 .signup-form-control {
-  border: 5px solid #002357cc;
+  border: 5px solid #002357;
   width: 100%;
   height: 2.75em;
   border-radius: 5%;
@@ -37,30 +37,101 @@ html {
 
 .btn-submit-signup {
   background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
+  font-weight: 800;
+  font-size: 1.5em;
   padding: 3%;
-  width: 40%;
+  width: 50%;
   border-radius: 10%;
   margin-top: 2%;
 }
-
 
 .btn-submit-signup:focus {
   /* background-color: blue; */
   color: white;
 }
 
+/* **********  MEDIA QUERIES  ******** */
+/* (iphone X) */
+@media only screen and (max-width: 375px) { 
+  .signup-form {
+    margin-top: 10%;
+    height: 425px;
+  } 
 
+  .signup-form-control {
+    height: 3em;
+  }
 
+  .btn-submit-signup {
+    margin-top: 10%;
+    width: 60%;
+  }
+}
 
+/* iphone 6/7/8 plus */
+@media only screen and (min-width: 414px) and (max-width: 768px) {
+  .signup-form {
+    height: 400px;
+  }
 
+  .btn-submit-signup {
+    margin-top: 5%;
+  }
+}
 
+/* (iPad) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .signup-welcome {
+    font-size: 2.5em;
+    padding: 0 5% 0 5%;
+  }
 
+  .signup-form {
+    border-top: 60px solid #002357;
+    height: 600px;
+  }
+
+  .signup-form-control {
+    /* border: 4px solid red; */
+    height: 3.5em;
+  }
+
+  .btn-submit-signup {
+    font-size: 2em;
+    font-weight: 800;
+    margin-top: 3%;
+    padding: 3%;
+  }
+}
+
+/* (ipad pro) */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .signup-welcome {
+    font-size: 3.5em;
+    padding: 0 5% 0 5%;
+  }
+
+  .signup-form {
+    border-top: 60px solid #002357;
+    height: 750px;
+  }
+
+  .signup-form-control {
+    /* border: 4px solid red; */
+    height: 4em;
+  }
+
+  .btn-submit-signup {
+    font-size: 2em;
+    font-weight: 800;
+    margin-top: 5%;
+    padding: 3%;
+  }
+}
 
 /* ******** TO DO ******** */
 /* 
 Add more/change style 
   button effects 
-  background
-  form background
-  work on navbar 
+
 */
