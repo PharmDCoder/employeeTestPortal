@@ -38,7 +38,7 @@ const Signup = () => {
       <h2 className="signup-welcome">
         Welcome to the SembraCare Employee Portal!
       </h2>
-      <form className="signup-form" onSubmit={handleSubmit}>
+      <form className="signup-form text-center" onSubmit={handleSubmit}>
         <Container>
           <Row className="signup-form-group">
             <Col size="12">
