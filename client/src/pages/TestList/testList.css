@@ -1,15 +1,40 @@
-
-
-.btnLink {
-    font-weight: bold;
-    color: white;
+body {
+  /* *************  ROYAL BLUE ON TOP ************  */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(50%, #0000c2),
+    color-stop(100%, #002357)
+  );
+  background-attachment: fixed;
 }
 
-div .form-group {
-    border: none;
+.btnLink {
+  font-weight: bold;
+  color: white;
+}
+
+.table-storage {
+  /* border: 2px solid black; */
+  border-top: 20px solid #002357cc;
+  height: 480px;
+  padding-top: 5%;
+  background-color: #c0c0c0;
+}
+
+.testList-form-group {
+  border: none;
+  border-top: 8px solid #002357cc;
+  border-bottom: 8px solid #002357cc;
+  border-radius: 5%;
+  height: 420px;
+  overflow: scroll;
+  width: 90%;
+  margin: auto;
+  background-color: white;
 }
 
 .btn {
-    width: 100%;
+  width: 100%;
 }
-
