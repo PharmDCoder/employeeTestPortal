@@ -18,8 +18,9 @@ html {
   /* border: 1px solid purple; */
 }
 
-.login-welcome h2 {
+.login-welcome {
   color:#C0C0C0;
+  margin: 8% 0 3% 0;
   padding: 1%;
   text-align: center;
 }
