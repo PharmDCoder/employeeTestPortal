@@ -30,16 +30,16 @@ form {
   text-align: center;
 }
 
-.form-group {
+.login-form-group {
   border: 2px solid blue;
   /* height: 4em; */
   margin-bottom: 8%;
 }
 
-.form-control {
+/* .form-control {
   border: none;
   height: 3em;
-}
+} */
 
 .btn {
   color: blue;

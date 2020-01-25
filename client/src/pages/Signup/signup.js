@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Container from "../../components/Container";
 import Col from "../../components/Col";
 import Row from "../../components/Row";
-import * as userService from '../../services/userService';
-import auth from "../../services/authService"
-import './signup.css';
+import * as userService from "../../services/userService";
+import auth from "../../services/authService";
+import "./signup.css";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -16,30 +16,34 @@ const Signup = () => {
   // useEffect(() => {
   // }, [search]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const { data: jwt } = await userService.register({"email":email,"password":password,"employeeName":employeeName});
+      const { data: jwt } = await userService.register({
+        email: email,
+        password: password,
+        employeeName: employeeName
+      });
       auth.loginWithJwt(jwt);
       window.location = "/";
     } catch (ex) {
       if (ex.response) {
-        alert(ex.response.data)
+        alert(ex.response.data);
       }
     }
   };
 
   return (
-    <div className="text-center">
-      <div className="mt-4 signUp-welcome">
-        <h2>Welcome to the SembraCare Employee Portal!</h2>
-      </div>
-      <form onSubmit={handleSubmit}>
+    <div>
+      <h2 className="signup-welcome">
+        Welcome to the SembraCare Employee Portal!
+      </h2>
+      <form className="signup-form" onSubmit={handleSubmit}>
         <Container>
-          <Row className="form-group">
+          <Row className="signup-form-group">
             <Col size="12">
               <input
-                className="form-control"
+                className="signup-form-control"
                 type="text"
                 placeholder="Email"
                 name="email"
@@ -47,10 +51,10 @@ const Signup = () => {
               />
             </Col>
           </Row>
-          <Row className="form-group">
+          <Row className="signup-form-group">
             <Col size="12">
               <input
-                className="form-control"
+                className="signup-form-control"
                 type="password"
                 placeholder="Password"
                 name="password"
@@ -58,10 +62,10 @@ const Signup = () => {
               />
             </Col>
           </Row>
-          <Row className="form-group">
+          <Row className="signup-form-group">
             <Col size="12">
               <input
-                className="form-control"
+                className="signup-form-control"
                 type="text"
                 placeholder="First Name"
                 name="employeeName"
@@ -69,7 +73,7 @@ const Signup = () => {
               />
             </Col>
           </Row>
-          <button className="btn-submit-signUp" type="submit">
+          <button className="btn-submit-signup" type="submit">
             Submit
           </button>
         </Container>

@@ -39,10 +39,10 @@ const Login = () => {
       </div>
       <form onSubmit={handleSubmit}>
         <Container className="mt-3">
-          <Row className="form-group">
+          <Row className="login-form-group">
             <Col size="12">
               <input
-                className="form-control"
+                className="login-form-control"
                 type="text"
                 placeholder="email"
                 name="email"
@@ -50,7 +50,7 @@ const Login = () => {
               />
             </Col>
           </Row>
-          <Row className="form-group">
+          <Row className="login-form-group">
             <Col size="12">
               <input
                 className="form-control"
