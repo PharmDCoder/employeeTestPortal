@@ -5,8 +5,18 @@ const testRecordSchema = new Schema({
   testID: { type: String, required: true },
   testScore: { type: Number, required: true },
   testPass: { type: Boolean, required: true },
-  testDate: { type: Date, required: false }
-  
+  testStart: { type: Date, required: false},
+  testFinish: { type: Date, required: false },
+  testSignature: { type: String, required: false },
+  testQuestionList: [
+    {
+      testQuestionText: String,
+      testQuestionAnswer: String,
+      testQuestionExplanation: String,
+      testQuestionBad: Boolean,
+      testQuestionCorrect: Boolean
+    }
+  ]
 });
 
 const TestRecord = mongoose.model("TestRecord", testRecordSchema);

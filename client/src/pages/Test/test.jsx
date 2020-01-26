@@ -7,9 +7,11 @@ import {
   MDBView,
   MDBContainer
 } from "mdbreact";
+import { Modal } from 'react-bootstrap'
 import Hipaa from "../../constants/materials.js";
-import "./test.css";
 import testService from "../../services/testService";
+import SignatureCanvas from 'react-signature-canvas'
+import "./test.css";
 // import ADL from '../../components/TestingTests/adl.js';
 
 const Test = ({ location, user }) => {
@@ -17,10 +19,14 @@ const Test = ({ location, user }) => {
   const [currentQuestionObject, setCurrentQuestionObject] = useState();
   const [correctAnswerCount, setCorrectAnswerCount] = useState();
   const [wrongAnswerCount, setWrongAnswerCount] = useState();
+  const [startTime, setStartTime] = useState();
+  const [questionList, setQuestionsList] = useState([]);
   const [finalizeTest, setFinalizeTest] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     try {
+      setStartTime(new Date());
       const test = location.state.test;
       test.testQuestions = shuffleFunction(test.testQuestions);
 
@@ -33,8 +39,8 @@ const Test = ({ location, user }) => {
       });
       setCorrectAnswerCount(0);
       setWrongAnswerCount(0);
-    } catch (ex) {}
-  }, []);
+    } catch (ex) { }
+  }, [location]);
 
   function shuffleFunction(testQuestions) {
     for (let i = testQuestions.length - 1; i > 0; i--) {
@@ -73,6 +79,7 @@ const Test = ({ location, user }) => {
 
   const handleNext = async e => {
     e.preventDefault();
+
     const {
       selectedAnswer,
       currentQuestion,
@@ -83,17 +90,38 @@ const Test = ({ location, user }) => {
       alert("Please select an Answer");
       return;
     }
-
+    console.log(startTime);
     if (correctAnswerCount + wrongAnswerCount <= 10) {
       if (selectedAnswer === currentQuestion.questionAnswer) {
         setCorrectAnswerCount(correctAnswerCount + 1);
+        setQuestionsList([...questionList, {
+          testQuestionText: currentQuestion.questionText,
+          testQuestionAnswer: currentQuestion.questionAnswer,
+          testQuestionCorrect: true
+        }]);
       } else {
         setWrongAnswerCount(wrongAnswerCount + 1);
+        if (currentQuestion.questionOptionsBad.indexOf(selectedAnswer) > -1) {
+          setQuestionsList([...questionList, {
+            testQuestionText: currentQuestion.questionText,
+            testQuestionAnswer: currentQuestion.questionAnswer,
+            testQuestionCorrect: false,
+            testQuestionBad: true,
+            testQuestionExplanation: currentQuestion.questionExplanation
+          }]);
+        } else {
+          setQuestionsList([...questionList, {
+            testQuestionText: currentQuestion.questionText,
+            testQuestionAnswer: currentQuestion.questionAnswer,
+            testQuestionCorrect: false,
+            testQuestionExplanation: currentQuestion.questionExplanation
+          }]);
+        }
       }
     } else {
       alert(
         "finished - SCORE: " +
-          correctAnswerCount / (correctAnswerCount + wrongAnswerCount)
+        correctAnswerCount / (correctAnswerCount + wrongAnswerCount)
       );
     }
 
@@ -126,8 +154,10 @@ const Test = ({ location, user }) => {
       const testRecord = {
         testScore: currentTestScore,
         testPass: currentTestScore >= 70,
-        testDate: new Date(),
-        testID: currentTest._id
+        testStart: startTime,
+        testFinish: new Date(),
+        testID: currentTest._id,
+        testQuestionList: questionList
       };
       testService.postTestRecord(testRecord, user.id);
 
@@ -139,84 +169,102 @@ const Test = ({ location, user }) => {
     }
   };
 
-  return (
-    <MDBContainer className="carousel-container">
-      {/* <h1 className="title">{Hipaa.title}</h1> */}
-      <MDBCarousel
-        className="z-depth-1 carousel"
-        activeItem={1}
-        length={2}
-        showControls={true}
-        showIndicators={true}
-        interval={false}
-      >
-        <div className="carousel-content">
-          <MDBCarouselInner>
-            <MDBCarouselItem itemId="1">
-              <MDBView>
-                <div>
-                  {Hipaa.content.map(p => (
-                    <p>{p.text}</p>
-                  ))}
-                </div>
-              </MDBView>
-            </MDBCarouselItem>
-            <MDBCarouselItem itemId="2">
-              {currentQuestionObject && (
-                <MDBView>
-                  <h3>{currentQuestionObject.currentQuestion.questionText}</h3>
-                  {currentQuestionObject.currentQuestionOptions.map(option => {
-                    return (
-                      <React.Fragment>
-                        <hr />
-                        <label className="radio-inline" for={option}>
-                          <input
-                            id={option}
-                            type="radio"
-                            name="currentAnswers"
-                            value={option}
-                            checked={
-                              currentQuestionObject.selectedAnswer === option
-                            }
-                            onChange={handleAnswerSelect}
-                          />
-                          {option}
-                        </label>
-                      </React.Fragment>
-                    );
-                  })}
-                  <hr />
-                  {!finalizeTest && (
-                    <button className="btn-next" onClick={handleNext}>
-                      Next
-                    </button>
-                  )}
-                  {finalizeTest && (
-                    <React.Fragment>
-                      <h6>
-                        You scored a:{" "}
-                        {(100 * correctAnswerCount) /
-                          (correctAnswerCount + wrongAnswerCount)}
-                        %
-                      </h6>
-                      <button className="btn-submit" onClick={handleSubmit}>
-                        Submit Test
-                      </button>
-                    </React.Fragment>
-                  )}
-                </MDBView>
-              )}
-            </MDBCarouselItem>
+  const closeModal = () => {
+    setShowModal(false);
+  }
+  const openModal = () => {
+    setShowModal(true);
+  }
 
-            {/* <MDBCarouselItem itemId="3">
-              <MDBView>
-                <ADL />
-              </MDBView>
-            </MDBCarouselItem> */}
-          </MDBCarouselInner>
-        </div>
-      </MDBCarousel>
-    </MDBContainer>
+  return (
+    <React.Fragment>
+      <Modal show={showModal} onHide={closeModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Employee Signature:</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <SignatureCanvas canvasProps={{ width: 300, height: 200, className: 'sigCanvas' }} />
+        </Modal.Body>
+        <Modal.Footer>
+          <button class="btn btn-danger" onClick={closeModal}>Close</button>
+        </Modal.Footer>
+      </Modal>
+
+      <MDBContainer className="carousel-container">
+        {/* <h1 className="title">{Hipaa.title}</h1> */}
+        <MDBCarousel
+          className="z-depth-1 carousel"
+          activeItem={1}
+          length={2}
+          showControls={true}
+          showIndicators={true}
+          interval={false}
+        >
+          <div className="carousel-content">
+            <MDBCarouselInner>
+              <MDBCarouselItem itemId="1">
+                <MDBView>
+                  <div>
+                    {Hipaa.content.map(p => (
+                      <p>{p.text}</p>
+                    ))}
+                  </div>
+                </MDBView>
+              </MDBCarouselItem>
+              <MDBCarouselItem itemId="2">
+                {currentQuestionObject && (
+                  <MDBView>
+                    <h3>{currentQuestionObject.currentQuestion.questionText}</h3>
+                    {currentQuestionObject.currentQuestionOptions.map(option => {
+                      return (
+                        <React.Fragment>
+                          <hr />
+                          <label className="radio-inline" for={option}>
+                            <input
+                              id={option}
+                              type="radio"
+                              name="currentAnswers"
+                              value={option}
+                              checked={
+                                currentQuestionObject.selectedAnswer === option
+                              }
+                              onChange={handleAnswerSelect}
+                            />
+                            {option}
+                          </label>
+                        </React.Fragment>
+                      );
+                    })}
+                    <hr />
+                    {!finalizeTest && (
+                      <button className="btn-next" onClick={handleNext}>
+                        Next
+                      </button>
+                    )}
+                    <button className="btn-next" onClick={openModal}>
+                      Test
+                      </button>
+                    {finalizeTest && (
+                      <React.Fragment>
+                        <h6>
+                          You scored a:{" "}
+                          {(100 * correctAnswerCount) /
+                            (correctAnswerCount + wrongAnswerCount)}
+                          %
+                      </h6>
+                        <button className="btn-submit" onClick={handleSubmit}>
+                          Submit Test
+                      </button>
+                      </React.Fragment>
+                    )}
+                  </MDBView>
+                )}
+              </MDBCarouselItem>
+            </MDBCarouselInner>
+          </div>
+        </MDBCarousel>
+      </MDBContainer>
+    </React.Fragment>
   );
 };
 
