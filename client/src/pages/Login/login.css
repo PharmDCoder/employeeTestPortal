@@ -9,8 +9,8 @@ html {
 
 .login-welcome {
   color: #c0c0c0;
-  margin: 8% 0 3% 0;
-  padding: 1%;
+  /* margin: 8% 0 3% 0; */
+  /* padding: 1%; */
   text-align: center;
 }
 
@@ -18,8 +18,8 @@ html {
   /* border: 5px solid red; */
   border-top: 20px solid #002357;
   background-color: #c0c0c0;
-  height: 300px;
-  padding-top: 10%;
+  /* height: 300px; */
+  /* padding-top: 10%; */
 }
 
 /* div.container {
@@ -34,7 +34,7 @@ html {
 
 .login-form-control {
   border: 5px solid #002357;
-  height: 2.75em;
+  /* height: 2.75em; */
   border-radius: 5%;
   width: 100%;
   padding-left: 2%;
@@ -43,11 +43,11 @@ html {
 .btn-submit-login {
   background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
   font-weight: 800;
-  font-size: 1.5em;
-  padding: 3%;
-  width: 50%;
+  /* font-size: 1.5em; */
+  /* padding: 3%; */
+  /* width: 50%; */
   border-radius: 10%;
-  margin-top: 2%;
+  /* margin-top: 2%; */
   border: 1px solid #002357;
   box-shadow: 5px 10px 10px #002357;
 }
@@ -58,83 +58,153 @@ html {
 }
 
 /* **********  MEDIA QUERIES  ******** */
-/* (iPhone X) */
-@media only screen and (max-width: 375px) {
-  .login-form {
-    border-top: 40px solid #002357;
-    margin-top: 10%;
-    height: 425px;
-    padding-top: 15%;
+
+@media only screen and (max-width: 600px) { 
+  .login-welcome {
+    margin: 5% 0 10% 0;
   }
 
-  .login-form-control {
-    height: 3.5em;
+  .login-form {
+    padding-top: 8%;
+    height: 240px;
   }
 
   .btn-submit-login {
-    margin-top: 10%;
-    width: 60%;
+    margin-top: 3%;
+    padding: 2%;
+    width: 30%;
+  }
+
+  footer p {
+    font-size: 1.25em;
   }
 }
 
-/* (iPhone 6/7/8 plus) */
-@media only screen and (min-width: 414px) and (max-width: 768px) {
+/* Small devices (landscape phones and large portrait phones 600px and up) */
+@media only screen and (min-width: 600px) {
+  .login-welcome {
+    margin: 2% 0 2% 0;
+  }
+
   .login-form {
-    border-top: 40px solid #002357;
-    height: 400px;
-    padding-top: 10%;
+    margin: 0 0 15% 0;
+    padding-top: 5%;
+    height: 260px;
   }
 
-  .login-form-control {
-    height: 3.25em;
-  }
-
-  .btn-submit-login {
-    margin-top: 8%;
-  }
+.login-form-control {
+  height: 2.5em;
 }
 
-/* (ipad) */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+.btn-submit-login {
+  padding: 2%;
+  width: 25%;
+}
+} 
+
+/* Medium devices (Portrait tablets and large landscape phones) */
+@media only screen and (min-width: 768px) {
+  .login-welcome {
+    padding: 4% 5% 4% 5%;
+  }
+
   .login-welcome h2 {
     font-size: 2.5em;
   }
 
   .login-form {
-    border-top: 60px solid #002357;
-    margin-top: 5%;
-    height: 550px;
+    margin: 5% 5% 15% 5%;
+    border-top: 40px solid #002357;
+    height: 325px;
+    border-radius: 5%;
   }
 
   .login-form-control {
-    height: 4em;
+    height: 2.75em;
   }
 
   .btn-submit-login {
-    font-size: 2em;
-    margin-top: 5%;
+    /* margin-top: 2%; */
+    font-size: 1.25em;
   }
 }
 
-/* (ipad pro) */
-@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+/* Large handhelds (tablets landscape, large tablets portrait) */
+@media only screen and (min-width: 992px) {
   .login-welcome {
-    font-size: 1.5em;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
+    font-size: 1.25em;
+    padding: 0;
+    margin: 2% 0 5% 0;
   }
 
   .login-form {
-    border-top: 80px solid #002357;
-    height: 700px;
+    padding-top: 5%;
+    margin: 0 10%;
+    width: 80%;
+    height: 420px;
   }
 
   .login-form-control {
-    height: 4.5em;
+    width: 90%; 
   }
 
   .btn-submit-login {
-    font-size: 2.5em;
+    font-size: 1.5em;
+    margin-top: 4%;
+    width: 30%;
+  }
+
+  footer p {
+    font-size: 1.75em;
+  }
+}
+
+/* Large devices (small laptops and desktops) */
+@media only screen and (min-width: 1200px) {
+  .login-welcome {
+    font-size: 2em;
+  }
+
+  .login-form-control {
+    height: 3em;
+  }
+
+  .btn-submit-login {
+    margin-top: 0;
+  }
+}
+
+/* Large devices (tablets landscape, large tablets portrait) */
+@media only screen and (min-width: 1500px) {
+  .login-welcome {
+    padding: 0;
+    margin-bottom: 2%;
+  }
+
+  .login-welcome h2 {
+    font-size: 1.75em;
+  }
+
+  .login-form {
+    padding-top: 2%;
+    width: 60%;
+    margin: 0 20% 0 20%;
+    height: 300px;
+  }
+
+  .login-form-control {
+    height: 2.5em;
+  }
+
+  .btn-submit-login {
+    /* margin-top: 4%; */
+    font-size: 1em;
+    padding: 1%;
+    width: 25%;
+  }
+
+  footer p {
+    font-size: 1.5em;
   }
 }
 
