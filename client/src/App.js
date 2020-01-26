@@ -5,7 +5,8 @@ import Login from "./pages/Login/login";
 import Test from "./pages/Test/test";
 import TestList from "./pages/TestList/testList";
 import Navbar from "./components/Navbar/navbar.js";
-import TestLanding from "./pages/TestLanding/testLanding"
+import TestLanding from "./pages/TestLanding/testLanding";
+import TestView from "./pages/TestView/testView"
 import Footer from "./components/Footer/footer";
 import Wrapper from "./components/Wrapper";
 import Logout from "./components/Logout/logout";
@@ -23,7 +24,7 @@ function App() {
       getEmployeeRecords(user);
       getCurrentTests();
     }
-  }, []);
+  },[]);
 
   const getEmployeeRecords = async user => {
     const { data: employeeRecords } = await testRecords.getTestRecords(user.id);
@@ -67,6 +68,13 @@ function App() {
             path="/testLanding"
             render={props => (
               <TestLanding {...props} user={userData} currentTests={currentTests} />
+            )}
+          />
+          <Route
+            exact
+            path="/testView"
+            render={props => (
+              <TestView {...props} user={userData} currentTests={currentTests} />
             )}
           />
           <Route exact path="/signup" component={Signup} />

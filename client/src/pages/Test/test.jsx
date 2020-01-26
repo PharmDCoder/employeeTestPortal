@@ -23,6 +23,8 @@ const Test = ({ location, user }) => {
   const [questionList, setQuestionsList] = useState([]);
   const [finalizeTest, setFinalizeTest] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [empSignature, setEmpSignature] = useState(false);
+  let empSignaturePad = {};
 
   useEffect(() => {
     try {
@@ -157,7 +159,8 @@ const Test = ({ location, user }) => {
         testStart: startTime,
         testFinish: new Date(),
         testID: currentTest._id,
-        testQuestionList: questionList
+        testQuestionList: questionList,
+        testSignature: empSignature
       };
       testService.postTestRecord(testRecord, user.id);
 
@@ -175,6 +178,14 @@ const Test = ({ location, user }) => {
   const openModal = () => {
     setShowModal(true);
   }
+  const signatureClear = () => {
+    empSignaturePad.clear();
+  }
+
+  const signatureSave = () => {
+    setEmpSignature(empSignaturePad.getTrimmedCanvas().toDataURL('image/png'));
+    setShowModal(false);
+  }
 
   return (
     <React.Fragment>
@@ -183,11 +194,10 @@ const Test = ({ location, user }) => {
           <Modal.Title>Employee Signature:</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <SignatureCanvas canvasProps={{ width: 300, height: 200, className: 'sigCanvas' }} />
+          <SignatureCanvas canvasProps={{ width: 300, height: 200, className: 'sigCanvas' }} ref={(ref) => { empSignaturePad = ref }} />
+          <button class="btn btn-primary" onClick={signatureClear}>Clear</button>
+          <button class="btn btn-success" onClick={signatureSave}>Save</button>
         </Modal.Body>
-        <Modal.Footer>
-          <button class="btn btn-danger" onClick={closeModal}>Close</button>
-        </Modal.Footer>
       </Modal>
 
       <MDBContainer className="carousel-container">
@@ -241,22 +251,21 @@ const Test = ({ location, user }) => {
                         Next
                       </button>
                     )}
-                    <button className="btn-next" onClick={openModal}>
-                      Test
-                      </button>
-                    {finalizeTest && (
+                    {finalizeTest && !empSignature && (
                       <React.Fragment>
                         <h6>
                           You scored a:{" "}
                           {(100 * correctAnswerCount) /
                             (correctAnswerCount + wrongAnswerCount)}
                           %
-                      </h6>
-                        <button className="btn-submit" onClick={handleSubmit}>
-                          Submit Test
-                      </button>
+                        </h6>
+                        <button className="btn-next" onClick={openModal}>
+                          Finish Test
+                        </button>
                       </React.Fragment>
                     )}
+                    {empSignature && <button className="btn-submit" onClick={handleSubmit}>Submit Test - {(100 * correctAnswerCount) /
+                            (correctAnswerCount + wrongAnswerCount)}%</button>}
                   </MDBView>
                 )}
               </MDBCarouselItem>

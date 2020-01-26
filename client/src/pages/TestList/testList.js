@@ -65,29 +65,38 @@ const TestList = ({ user, currentTests }) => {
                           </td>
                           <td key={test._id + "5"} className="align-middle">
                             {foundRecord.length > 0 ? (
-                              <button
-                                key={test._id + "btn1"}
-                                className="btn btn-success"
-                              >
-                                View
-                              </button>
-                            ) : (
                               <Link
-                                key={test._id + "link2"}
+                                key={test._id + "link1"}
                                 to={{
-                                  pathname: "/testLanding",
+                                  pathname: "/testView",
                                   state: { testid: test._id }
                                 }}
                                 className="btnLink"
                               >
                                 <button
-                                  key={test._id + "btn2"}
-                                  className="btn btn-primary"
+                                  key={test._id + "btn1"}
+                                  className="btn btn-success"
                                 >
-                                  Start
-                                </button>
+                                  View
+                              </button>
                               </Link>
-                            )}
+                            ) : (
+                                <Link
+                                  key={test._id + "link2"}
+                                  to={{
+                                    pathname: "/testLanding",
+                                    state: { testid: test._id }
+                                  }}
+                                  className="btnLink"
+                                >
+                                  <button
+                                    key={test._id + "btn2"}
+                                    className="btn btn-primary"
+                                  >
+                                    Start
+                                </button>
+                                </Link>
+                              )}
                           </td>
                         </tr>
                       );
