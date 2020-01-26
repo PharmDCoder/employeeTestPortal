@@ -24,15 +24,15 @@ const TestView = ({ location, currentTests, user }) => {
       console.log(testLoad)
       console.log(currentTestRecord)
     } catch (ex) { }
-  }, []);
+  });
 
   return (
-    <Container>
+    <Container className="summary-container">
       <Row className="text-center">
         {currentTest && (
-          <Col size="12"className="test-view-title">
+          <Col size="12"className="test-summary">
             <h2 className="text-center">{currentTest.testName}</h2>
-            <hr />
+            {/* <hr /> */}
             <h3 className="text-center">Test Score: {testRecord.testScore}%</h3>
             <h3>Completed On: {" "}
               <Moment format="MM/DD/YY">
@@ -45,22 +45,23 @@ const TestView = ({ location, currentTests, user }) => {
               </Moment>
               {" "} minutes
             </h3>
-            <img src={testRecord.testSignature} alt="signature" className="bg-white img-fluid" />
-            <hr />
+            <img src={testRecord.testSignature} alt="signature" className="bg-white signature-image"/>
+            {/* <hr /> */}
           </Col>
         )}
       </Row>
       {testRecord && (
-        <Row>
-          <Col size="12">
+        <Row  className="text-center">>
+          <Col size="12" className="test-answer-explanations">
             {testRecord.testQuestionList.map((testQuestion,index) => {
               console.log(testQuestion);
               return (
-                <div className={!testQuestion.testQuestionCorrect ? "text-danger" : "text-light" }>
+                <div id="question-explanation" className={!testQuestion.testQuestionCorrect ? "text-danger" : "text-dark"
+                 }>
                   <p>{index+1} - {testQuestion.testQuestionText}</p>
                   <p><strong>Correct Answer:</strong> {testQuestion.testQuestionAnswer}</p>
                   {!testQuestion.testQuestionCorrect && (<p><strong>Explanation: </strong>{testQuestion.testQuestionExplanation}</p>)}
-                  <hr />
+                  {/* <hr /> */}
                 </div>
               )
             })}
