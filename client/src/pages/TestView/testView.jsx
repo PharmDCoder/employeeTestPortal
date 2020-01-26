@@ -30,7 +30,7 @@ const TestView = ({ location, currentTests, user }) => {
     <Container>
       <Row className="text-center">
         {currentTest && (
-          <Col size="12" className="text-light">
+          <Col size="12"className="test-view-title">
             <h2 className="text-center">{currentTest.testName}</h2>
             <hr />
             <h3 className="text-center">Test Score: {testRecord.testScore}%</h3>
