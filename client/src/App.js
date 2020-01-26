@@ -92,7 +92,7 @@ function App() {
           />
           <Route exact path="/logout" component={Logout} />
         </Wrapper>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );

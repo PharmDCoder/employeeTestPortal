@@ -22,7 +22,7 @@ main.wrapper {
   background: #c0c0c0;
   color: #002357;
   width: 100%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .instructions-ul {
@@ -37,6 +37,22 @@ svg {
   position: relative;
   margin: 0 1% 0 1%;
 }
+
+/* .test-start-button {
+  color: white;
+  border: 5px solid white;
+} */
+
+#root > div > main > div > div:nth-child(3) > div > a > button {
+  margin-bottom: 10%;
+}
+
+button {
+  margin-bottom: 10%;
+}
+
+
+
 
 /* #root > div > main > div {
   margin: 0;
