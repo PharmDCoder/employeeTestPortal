@@ -669,7 +669,7 @@ const testSeed = [
   {
     testName: "Foot Care",
     testCategory: "safety",
-    testRequired: true,
+    testRequired: false,
     testImage: "footCare.jpg",
     testCreatedBy: "Jamie",
     testCreatedDate: new Date(2019, 1, 1),
@@ -1019,7 +1019,7 @@ const testSeed = [
   {
     testName: "Back Safety",
     testCategory: "safety",
-    testRequired: true,
+    testRequired: false,
     testImage: "backSafety.jpg",
     testCreatedBy: "Jamie",
     testCreatedDate: new Date(2019, 1, 1),
@@ -1369,7 +1369,7 @@ const testSeed = [
   {
     testName: "Hand Hygiene",
     testCategory: "safety",
-    testRequired: true,
+    testRequired: false,
     testImage: "handHygiene.jpg",
     testCreatedBy: "Jamie",
     testCreatedDate: new Date(2019, 1, 1),
@@ -2089,7 +2089,7 @@ const testSeed = [
   {
     testName: "Nutrition",
     testCategory: "safety",
-    testRequired: true,
+    testRequired: false,
     testImage: "nutrition.jpg",
     testCreatedBy: "Jamie",
     testCreatedDate: new Date(2019, 1, 1),
@@ -2439,7 +2439,7 @@ const testSeed = [
   {
     testName: "Oral Hygiene",
     testCategory: "safety",
-    testRequired: true,
+    testRequired: false,
     testImage: "oralHygiene.jpg",
     testCreatedBy: "Jamie",
     testCreatedDate: new Date(2019, 1, 1),
