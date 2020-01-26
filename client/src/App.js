@@ -24,7 +24,7 @@ function App() {
       getEmployeeRecords(user);
       getCurrentTests();
     }
-  }, [userData]);
+  },[]);
 
   const getEmployeeRecords = async user => {
     const { data: employeeRecords } = await testRecords.getTestRecords(user.id);
