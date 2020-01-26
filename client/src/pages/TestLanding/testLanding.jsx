@@ -27,7 +27,7 @@ const TestLanding = ({ location, currentTests, user }) => {
         {currentTest && (
           <Col size="12">
             <img
-              className="img-fluid img"
+              className="img img"
               src={require("../../images/" + currentTest.testImage)}
               alt="test image"
             ></img>
