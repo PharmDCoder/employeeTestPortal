@@ -32,6 +32,7 @@
     "material-icons": "^0.3.1",
     "mongoose": "^5.3.16",
     "node-sass": "^4.13.0",
-    "popper.js": "^1.16.0"
+    "popper.js": "^1.16.0",
+    "react-icons": "^3.8.0"
   }
 }
