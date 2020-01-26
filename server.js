@@ -17,7 +17,9 @@ app.use(cors());
 
 const routes = require("./routes/apiRoutes");
 const mongoose = require("mongoose");
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/testportal";
+const MONGODB_URI =
+  process.env.MONGODB_URI ||
+  "mongodb://jamie-oneill:Jleigh08@ds213529.mlab.com:13529/heroku_7jml7vh6";
 const PORT = process.env.PORT || 3001;
 
 // Parse request body as JSON
