@@ -4,7 +4,7 @@
   /* border: 10px solid black; */
   /* background-color: blue; */
   color: #002357;
-  background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
+  /* background-image: radial-gradient(#eee243 15%, #aa8b00 90%); */
   position: absolute;
   bottom: 0;
   /* left: 0; */
@@ -20,6 +20,12 @@
   text-align: center;
   margin: 0;
   font-weight: 800;
+}
+
+img {
+  /* border: 5px solid white; */
+  height: 50px;
+  width: 250px;
 }
 
 /* .footer-title {

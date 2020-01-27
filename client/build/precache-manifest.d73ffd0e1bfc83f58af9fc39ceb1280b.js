@@ -4,20 +4,20 @@ self.__precacheManifest = [
     "url": "/static/media/footCare.eac15a1e.jpg"
   },
   {
-    "revision": "80aed3bae9f2276ec5b5",
-    "url": "/static/css/main.e9442273.chunk.css"
+    "revision": "35cb068630df76797399",
+    "url": "/static/css/main.90801251.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "c6a5332e491459f1c63afe3c065191d2",
-    "url": "/static/media/safeTransfers.c6a5332e.jpg"
+    "revision": "2787ef86eb26e3f7a3265f154555dbd1",
+    "url": "/static/media/sembraCareLogoTransparent1.2787ef86.png"
   },
   {
-    "revision": "cc6aa66c2fee47c9965d",
-    "url": "/static/js/2.d8744f30.chunk.js"
+    "revision": "69845c99fb23ce99e34f",
+    "url": "/static/js/2.30aab59e.chunk.js"
   },
   {
     "revision": "cebd4dcd9b796ffb8186193b2f316028",
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/static/media/backSafety.55bf26f4.jpg"
   },
   {
-    "revision": "80aed3bae9f2276ec5b5",
-    "url": "/static/js/main.6c52063f.chunk.js"
+    "revision": "35cb068630df76797399",
+    "url": "/static/js/main.80a0663b.chunk.js"
   },
   {
     "revision": "04aabdd3babb4cb175c7a9ae4200d3c3",
@@ -56,11 +56,15 @@ self.__precacheManifest = [
     "url": "/static/media/preventingFalls.aca39956.jpg"
   },
   {
-    "revision": "cc6aa66c2fee47c9965d",
+    "revision": "c6a5332e491459f1c63afe3c065191d2",
+    "url": "/static/media/safeTransfers.c6a5332e.jpg"
+  },
+  {
+    "revision": "69845c99fb23ce99e34f",
     "url": "/static/css/2.7b0f7126.chunk.css"
   },
   {
-    "revision": "4d5c1cd0baf2cdd8a5d9d77d98d1c08a",
+    "revision": "63f46f35afa99c8e64f6b7cb8115f796",
     "url": "/index.html"
   }
 ];

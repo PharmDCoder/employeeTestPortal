@@ -4,7 +4,8 @@ import "./footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <p className="footer-title">SembraCare Logo</p>
+      {/* <p className="footer-title">SembraCare Logo</p> */}
+      <img src="../images/sembraCareLogoTransparent1.png"></img>
     </footer>
   );
 }
