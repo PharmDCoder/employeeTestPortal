@@ -17,6 +17,7 @@ app.use(cors());
 
 const routes = require("./routes/apiRoutes");
 const mongoose = require("mongoose");
+// const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/testportal"
 const MONGODB_URI =
   process.env.MONGODB_URI ||
   "mongodb://jamie-oneill:Jleigh08@ds213529.mlab.com:13529/heroku_7jml7vh6";
@@ -27,23 +28,23 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Make public a static folder
 // app.use(express.static("public"));
-app.use(
-  "/static",
-  express.static(path.join(__dirname, "./client/build/index.html"))
-);
+// app.use(
+//   "/static",
+//   express.static(path.join(__dirname, "./client/build/index.html"))
+// );
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 app.use(routes);
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", function(req, res) {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
 
 //connect to mongoDB
 mongoose.connect(MONGODB_URI, {
