@@ -19,7 +19,7 @@ const TestLanding = ({ location, currentTests, user }) => {
       console.log(testLoad[0]);
       setCurrentTest(testLoad[0]);
     } catch (ex) {}
-  }, []);
+  });
 
   return (
     <Container>
@@ -27,30 +27,25 @@ const TestLanding = ({ location, currentTests, user }) => {
         {currentTest && (
           <Col size="12">
             <img
-              className="img-fluid"
+              className="img img"
               src={require("../../images/" + currentTest.testImage)}
               alt="test image"
             ></img>
-            <hr />
+            {/* <hr /> */}
           </Col>
         )}
       </Row>
-      <Row>
         {currentTest && (
-          <Col size="12">
-            <h2 className="text-center">{currentTest.testName}</h2>
-            <hr />
-          </Col>
+            <h2 className="text-center test-landing-title">{currentTest.testName}</h2>
         )}
-      </Row>
       <IconContext.Provider
         value={{ color: "blue", size: "2em", className: "global-class-name" }}
       >
         <Row>
           {currentTest && (
-            <Col size="12">
+            <Col size="12" className="instructions-container">
               <h4 className="text-center">Test Instructions</h4>
-              <ul className="bg-white">
+              <ul className="bg-white instructions-ul">
                 <li>This is an Open Book Test</li>
                 <li>
                   Swipe Left <FaRegHandPointLeft /> to View the Test Screen
@@ -68,7 +63,7 @@ const TestLanding = ({ location, currentTests, user }) => {
                   Post Your Results
                 </li>
               </ul>
-              <hr />
+              {/* <hr /> */}
             </Col>
           )}
         </Row>
@@ -79,7 +74,7 @@ const TestLanding = ({ location, currentTests, user }) => {
             to={{ pathname: "/test", state: { test: currentTest } }}
             className="btnLink"
           >
-            <button className="btn btn-primary">Start Test</button>
+            <button className="btn btn-primary test-start-button">Start Test</button>
           </Link>
         </Col>
       </Row>

@@ -4,7 +4,8 @@ const bcrypt = require("bcryptjs")
 
 // This file empties the Tests collection and inserts the books below
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/testportal");
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/testportal");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://jamie-oneill:Jleigh08@ds213529.mlab.com:13529/heroku_7jml7vh6");
 
 const testSeed = [
   {
