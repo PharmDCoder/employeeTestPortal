@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Signup from "./pages/Signup/signup";
 import Login from "./pages/Login/login";
 import Test from "./pages/Test/test";
-import TestList from "./pages/TestList/testList";
+// import TestList from "./pages/TestList/testList";
+import TableList from "./pages/TestList/testListMdb"
 import Navbar from "./components/Navbar/navbar.js";
 import TestLanding from "./pages/TestLanding/testLanding";
 import TestView from "./pages/TestView/testView"
@@ -47,7 +48,7 @@ function App() {
               exact
               path="/"
               render={props => (
-                <TestList
+                <TableList
                   {...props}
                   user={userData}
                   currentTests={currentTests}
@@ -83,7 +84,7 @@ function App() {
             exact
             path="/testlist"
             render={props => (
-              <TestList
+              <TableList
                 {...props}
                 user={userData}
                 currentTests={currentTests}

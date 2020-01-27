@@ -23,7 +23,7 @@ const TestView = ({ location, currentTests, user }) => {
 
       console.log(testLoad);
       console.log(currentTestRecord);
-    } catch (ex) {}
+    } catch (ex) { }
   });
 
   return (
@@ -56,7 +56,6 @@ const TestView = ({ location, currentTests, user }) => {
       </Row>
       {testRecord && (
         <Row className="text-center">
-          >
           <Col size="12" className="test-answer-explanations">
             {testRecord.testQuestionList.map((testQuestion, index) => {
               console.log(testQuestion);

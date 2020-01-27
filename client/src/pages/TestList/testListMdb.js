@@ -1,76 +1,129 @@
-import React from "react";
-import { MDBBtn, MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
-// import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { MDBDataTable } from 'mdbreact';
+import { FaExclamationCircle } from "react-icons/fa";
+import { IconContext } from "react-icons";
+import Greeting from "../../components/Greeting/greeting";
+import { Link } from "react-router-dom";
+import "./testListMdb.css"
 
-const TableList = ({ props, user, currentTests }) => {
+const TableList = ({ user, currentTests }) => {
+  const [testData, setTestData] = useState();
+  console.log(currentTests);
+
+  useEffect(() => {
+    try {
+      console.log("Creating Test Data")
+      let testDataHold = [];
+      if (currentTests) {
+        currentTests.forEach(test => {
+          let testRecord = checkTestRecord(test);
+          console.log(testRecord)
+          let testObject = {
+            required: test.testRequired ? <FaExclamationCircle /> : '',
+            name: test.testName,
+            dueDate: '1/1/21',
+            grade: testRecord.found ? testRecord.foundRecord[0].testScore + "%" : "-",
+            actions: testRecord.found ? <Link key={test._id + "link1"} to={{
+              pathname: "/testView",
+              state: { testid: test._id }
+            }}
+              className="btnLink"
+            >
+              <button
+                key={test._id + "btn1"}
+                className="btn btn-success"
+              >
+                View
+          </button>
+            </Link> : <Link
+              key={test._id + "link2"}
+              to={{
+                pathname: "/testLanding",
+                state: { testid: test._id }
+              }}
+              className="btnLink"
+            >
+                <button
+                  key={test._id + "btn2"}
+                  className="btn btn-primary"
+                >
+                  Start
+                                </button>
+              </Link>
+          };
+          testDataHold.push(testObject);
+        });
+        setTestData({columns:data.columns,rows:testDataHold});
+        console.log({columns:data.columns,rows:testDataHold});
+      }
+    } catch (ex) { }
+  }, [user, currentTests]);
+
   const checkTestRecord = test => {
     const foundRecord = user.testrecord.filter(testRecord => {
       return testRecord.testID === test._id;
     });
-    return foundRecord.length > 0;
+    return {found:foundRecord.length > 0, foundRecord: foundRecord};
   };
-  const columns = [
-    {
-      label: "Test Name",
-      field: "id",
-      sort: "asc"
-    },
-    {
-      label: "Due Date",
-      field: "first",
-      sort: "asc"
-    },
-    {
-      label: "Status",
-      field: "last",
-      sort: "asc"
-    },
-    {
-      label: "Action",
-      field: "handle",
-      sort: "asc"
-    }
-  ];
 
-  const rows_regular_btn = [
-    {
-      id: 1,
-      "Due Date": "1/1/21",
-      Status: "",
-      Action: (
-        <MDBBtn className="testList-button" color="purple" size="sm">
-          Start
-        </MDBBtn>
-      )
-    },
-    {
-      id: 2,
-      first: "Jacob",
-      last: (
-        <MDBBtn color="purple" size="sm">
-          Button
-        </MDBBtn>
-      ),
-      handle: "@fat"
-    },
-    {
-      id: 3,
-      first: "Larry",
-      last: "the Bird",
-      handle: (
-        <MDBBtn color="purple" size="sm">
-          Button
-        </MDBBtn>
-      )
-    }
-  ];
+
+
+  const data = {
+    columns: [
+      {
+        label: '',
+        field: 'required',
+        width: 20
+      },
+      {
+        label: 'Name',
+        field: 'name',
+        sort: 'asc',
+        width: 150
+      },
+      {
+        label: 'DueDate',
+        field: 'dueDate',
+        sort: 'asc',
+        width: 100
+      },
+      {
+        label: 'Grade',
+        field: 'grade',
+        sort: 'asc',
+        width: 100
+      },
+      {
+        label: '',
+        field: 'actions',
+        sort: 'asc',
+        width: 100
+      }
+    ],
+    rows: [
+      {
+        required: 'Michael Bruce',
+        name: 'Javascript Developer',
+        dueDate: 'Singapore',
+        actions: '29'
+      }
+    ]
+  };
 
   return (
-    <MDBTable btn small>
-      <MDBTableHead columns={columns} />
-      <MDBTableBody rows={rows_regular_btn} />
-    </MDBTable>
+    <IconContext.Provider value={{ color: "red", size: "1.5em", className: "global-class-name" }}>
+      <React.Fragment>
+        <Greeting className="greeting" user={user} />
+        <MDBDataTable
+          data={testData}
+          className="bg-light mb-5 pt-2 text-center"
+          displayEntries={false}
+          noBottomColumns="false"
+          searchLabel="Search Test"
+        />
+      </React.Fragment>
+    </IconContext.Provider>
   );
-};
+}
 
 export default TableList;
