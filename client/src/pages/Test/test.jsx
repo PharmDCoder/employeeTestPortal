@@ -206,7 +206,7 @@ const Test = ({ location, user }) => {
           className="z-depth-1 carousel"
           activeItem={1}
           length={2}
-          showControls={true}
+          showControls={false}
           showIndicators={true}
           interval={false}
         >

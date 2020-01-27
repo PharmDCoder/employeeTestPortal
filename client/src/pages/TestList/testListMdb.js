@@ -33,7 +33,7 @@ const TableList = ({ user, currentTests }) => {
                 key={test._id + "btn1"}
                 className="btn btn-success"
               >
-                View
+                {testRecord.foundRecord[0].testScore + "%"}
           </button>
             </Link> : <Link
               key={test._id + "link2"}
@@ -87,12 +87,12 @@ const TableList = ({ user, currentTests }) => {
         sort: 'asc',
         width: 100
       },
-      {
-        label: 'Grade',
-        field: 'grade',
-        sort: 'asc',
-        width: 100
-      },
+      // {
+      //   label: 'Grade',
+      //   field: 'grade',
+      //   sort: 'asc',
+      //   width: 100
+      // },
       {
         label: '',
         field: 'actions',
@@ -116,7 +116,7 @@ const TableList = ({ user, currentTests }) => {
         <Greeting className="greeting" user={user} />
         <MDBDataTable
           data={testData}
-          className="bg-light mb-5 pt-2 text-center"
+          className="bg-light mb-5 pt-2 text-center test-view-table"
           displayEntries={false}
           noBottomColumns="false"
           searchLabel="Search Test"
