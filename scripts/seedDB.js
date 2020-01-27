@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const db = require("../models");
+const bcrypt = require("bcryptjs")
 
 // This file empties the Tests collection and inserts the books below
 
@@ -3507,6 +3508,15 @@ const testSeed = [
     ]
   }
 ];
+
+// const userSeed = {
+//   email: 'test@bootcamp.com',
+//   password: 'password1',
+//   employeeName: 'test'
+// }
+
+
+// db.User.create(userSeed);
 
 db.Test.remove({})
   .then(() => db.Test.collection.insertMany(testSeed))

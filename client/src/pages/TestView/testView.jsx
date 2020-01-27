@@ -19,12 +19,11 @@ const TestView = ({ location, currentTests, user }) => {
       let currentTestRecord = user.testrecord.filter(test => {
         return test.testID === location.state.testid;
       });
-      setTestRecord(currentTestRecord[0])
-
+      setTestRecord(currentTestRecord[0]);
       console.log(testLoad)
       console.log(currentTestRecord)
     } catch (ex) { }
-  }, []);
+  });
 
   return (
     <Container>
@@ -54,7 +53,6 @@ const TestView = ({ location, currentTests, user }) => {
         <Row>
           <Col size="12">
             {testRecord.testQuestionList.map((testQuestion,index) => {
-              console.log(testQuestion);
               return (
                 <div className={!testQuestion.testQuestionCorrect ? "text-danger" : "text-light" }>
                   <p>{index+1} - {testQuestion.testQuestionText}</p>

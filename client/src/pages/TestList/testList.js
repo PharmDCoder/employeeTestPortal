@@ -16,10 +16,6 @@ const TestList = ({ user, currentTests }) => {
     return foundRecord;
   };
 
-  const requiredClick = () => {
-    alert("This test is required");
-  };
-
   return (
     <IconContext.Provider
       value={{ color: "red", size: "1.5em", className: "global-class-name" }}
@@ -51,7 +47,7 @@ const TestList = ({ user, currentTests }) => {
                             className="align-middle"
                           >
                             {test.testRequired && (
-                              <FaExclamationCircle onClick={requiredClick} />
+                              <FaExclamationCircle />
                             )}{" "}
                             {test.testName}
                           </th>
