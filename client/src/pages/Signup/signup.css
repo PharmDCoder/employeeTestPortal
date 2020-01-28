@@ -50,9 +50,10 @@ html {
   box-shadow: 5px 10px 10px #002357;
 }
 
-.btn-submit-signup:focus {
+.btn-submit-signup:active {
   /* background-color: blue; */
-  color: white;
+  color:#C0C0C0;
+  box-shadow: 5px 10px 10px #0000c2;
 }
 
 /* **********  MEDIA QUERIES  ******** */

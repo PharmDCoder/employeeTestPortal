@@ -67,8 +67,8 @@ div.dataTables_wrapper.dt-bootstrap4.bg-light.mb-5.pt-2.text-center.test-view-ta
     /* padding: 10% 15%; */
 }
 
-#root > div > main > div.dataTables_wrapper.dt-bootstrap4.bg-light.mb-5.pt-2.text-center.test-view-table > div > div > div > table > tbody > tr > td > a > button.btn.btn-success:focus, 
-#root > div > main > div.dataTables_wrapper.dt-bootstrap4.bg-light.mb-5.pt-2.text-center.test-view-table > div > div > div > table > tbody > tr > td > a > button.btn.btn-primary:focus {
+#root > div > main > div.dataTables_wrapper.dt-bootstrap4.bg-light.mb-5.pt-2.text-center.test-view-table > div > div > div > table > tbody > tr > td > a > button.btn.btn-success:active, 
+#root > div > main > div.dataTables_wrapper.dt-bootstrap4.bg-light.mb-5.pt-2.text-center.test-view-table > div > div > div > table > tbody > tr > td > a > button.btn.btn-primary:active {
     color: #C0C0C0;
-    border: 2px solid white;
+    box-shadow: 5px 10px 10px #0000c2;
 }
