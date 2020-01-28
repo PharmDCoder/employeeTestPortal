@@ -15,11 +15,11 @@ html {
 }
 
 .signup-form {
-  /* border: 5px solid red;  */
   border-top: 20px solid #002357;
   border-radius: 5%;
   background-color: #c0c0c0;
-  /* box-shadow: 0px 0px 50px 5px #aa8b00; */
+  overflow-y: scroll;
+  box-shadow: 0px 0px 50px 5px #aa8b00;
   box-shadow: 0px 0px 50px 5px #C0C0C0;
   height: 350px;
   padding-top: 12%;
@@ -41,7 +41,6 @@ html {
 .btn-submit-signup {
   background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
   font-weight: 800;
-  /* font-size: 1.5em; */
   padding: 3%;
   width: 50%;
   border-radius: 10%;
@@ -51,7 +50,6 @@ html {
 }
 
 .btn-submit-signup:active {
-  /* background-color: blue; */
   color:#C0C0C0;
   box-shadow: 5px 10px 10px #0000c2;
 }
@@ -65,10 +63,8 @@ html {
   }
 
   .signup-form {
-    /* border: 10px solid black; */
     height: 340px;
     padding-top: 8%;
-    /* margin: auto; */
   } 
 
   .signup-form-control {
@@ -82,11 +78,6 @@ html {
     width: 40%
   }
 
-  /* footer p {
-    font-size: 1.5em;
-    margin: 0;
-    padding: 2%;
-  } */
 }
 
 /* Small devices (landscape phones and large portrait phones 600px and up) */
@@ -98,7 +89,6 @@ html {
   .signup-form {
     padding-top: 4%;
     height: 300px;
-    margin-bottom: 15%;
   }
 
   .signup-form-group {
@@ -129,14 +119,13 @@ html {
   }
 
   .signup-form {
-    margin-left: 5%;
-    margin-top: 5%;
+    margin: 5% 5%;
     padding-top: 5%;
     border-top: 40px solid #002357;
-    height: 420px;
+    height: 425px;
     width: 90%;
-    /* margin: auto; */
     border-radius: 5%;
+    box-shadow: 0px 0px 100px 15px #C0C0C0;
   }
 
   .signup-form-control {
@@ -147,12 +136,11 @@ html {
     font-size: 1.5em;
     font-weight: 800;
     margin-top: 4%;
-    /* padding: 3%; */
   }
 
-  footer p {
-    font-size: 1.5em;
-    padding: 1%;
+  .footer img {
+    height: 100px;
+    width: 300px;
   }
 }
 
@@ -166,22 +154,18 @@ html {
   .signup-form {
     padding-top: 8%;
     border-top: 60px solid #002357;
-    height: 650px;
+    height: 600px;
   }
 
   .signup-form-control {
-    height: 4em;
+    height: 3.5em;
   }
 
   .btn-submit-signup {
     font-size: 2em;
     font-weight: 800;
     margin-top: 5%;
-    padding: 3%;
-  }
-
-  footer p {
-    font-size: 2em;
+    padding: 2%;
   }
 }
 
@@ -197,63 +181,40 @@ html {
   .signup-form {
     padding-top: 2%;
     border-top: 60px solid #002357;
-    height: 350px;
+    height: 400px;
     width: 60%;
     margin: 0 0 10% 20%;
   }
 
   .signup-form-control {
-    height: 2em;
+    height: 2.5em;
     width: 80%;
   }
 
   .btn-submit-signup {
-    font-size: 1em;
+    font-size: 1.25em;
     font-weight: 800;
     margin-top: 4%;
     padding: 2%;
   }
 
-  footer p {
-    font-size: 1.25em;
-  }
 }
 
 /* Large devices (tablets landscape, large tablets portrait) */
 @media only screen and (min-width: 1500px) {
-  /* .signup-welcome {
-    font-size: 3.5em;
-    padding: 5% 5% 0 5%;
-  } */
+  .signup-welcome {
+    margin-bottom: 3%;
+  }
 
   .signup-form {
     width: 50%;
     margin: auto;
-    /* padding-top: 8%; */
-    /* border-top: 60px solid #002357; */
-    /* height: 650px; */
   }
-
-  /* .signup-form-control {
-    height: 4em;
-  } */
 
   .btn-submit-signup {
-    /* font-size: 2em; */
     font-weight: 800;
     margin-top: 2%;
-    /* padding: 3%; */
   }
 
-  footer p {
-    font-size: 1.25em;
-    padding: .5%;
-  }
 }
 
-/* ******** TO DO ******** */
-/* 
-Add more/change style 
-  button effects 
-
-*/

@@ -16,7 +16,6 @@ html {
   /* height: 100%; */
 }
 
-
 body {
   /* *************  ROYAL BLUE ON TOP ************  */
   background: -webkit-gradient(
@@ -26,10 +25,10 @@ body {
     color-stop(50%, #0000c2),
     color-stop(100%, #002357)
   );
-  width: 100vw; /* trying to fix white sides on heroku deployment */
+  /* trying to fix white sides on heroku deployment */
+  /* width: 100vw; */
+  background: cover;
   background-attachment: fixed;
   padding-bottom: 50px; /* Height of footer */
   /* padding-top: 10px; */
 }
-
-
