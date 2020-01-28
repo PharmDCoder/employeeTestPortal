@@ -9,6 +9,9 @@ import './login.css';
 const Login = () => {
   const [email, setemail] = useState();
   const [password, setPassword] = useState();
+  const [loginError, setLoginError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   // useEffect(() => {
   // }, [search]);
@@ -17,18 +20,26 @@ const Login = () => {
     e.preventDefault();
     try {
       const userResponse = await auth.login(email, password);
- 
+
       if (userResponse) {
-        alert(userResponse);
+        setErrorMessage(userResponse);
+        if(userResponse === "User Not Found")
+        {
+          setLoginError(true);
+          setPasswordError(false);
+        } else if (userResponse === "Wrong Password for this user") {
+          setLoginError(false);
+          setPasswordError(true);
+        } else {
+          setLoginError(true);
+          setPasswordError(true);
+        }
       } else {
         window.location = "/";
       }
     } catch (ex) {
-      if (ex.response && ex.response.status === 400) {
-        const errors = { ...this.state.errors };
-        errors.username = ex.response.data;
-        this.setState({ errors });
-      }
+      //set error to ex
+      setErrorMessage(ex);
     }
   };
 
@@ -48,6 +59,11 @@ const Login = () => {
                 name="email"
                 onChange={e => setemail(e.target.value)}
               />
+              {loginError && (
+                <div class="alert alert-danger p-1" role="alert">
+                  <strong>{errorMessage}</strong>
+                </div>
+              )}
             </Col>
           </Row>
           <Row className="login-form-group">
@@ -59,6 +75,11 @@ const Login = () => {
                 name="password"
                 onChange={e => setPassword(e.target.value)}
               />
+              {passwordError && (
+                <div class="alert alert-danger p-1" role="alert">
+                  <strong>{errorMessage}</strong>
+                </div>
+              )}
             </Col>
           </Row>
           <button className="btn-submit-login" type="submit">

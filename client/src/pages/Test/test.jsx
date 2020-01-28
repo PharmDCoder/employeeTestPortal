@@ -21,6 +21,8 @@ const Test = ({ location, user }) => {
   const [wrongAnswerCount, setWrongAnswerCount] = useState();
   const [startTime, setStartTime] = useState();
   const [questionList, setQuestionsList] = useState([]);
+  const [questionError, setQuestionError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [finalizeTest, setFinalizeTest] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [empSignature, setEmpSignature] = useState(false);
@@ -81,7 +83,7 @@ const Test = ({ location, user }) => {
 
   const handleNext = async e => {
     e.preventDefault();
-
+    setQuestionError(false);
     const {
       selectedAnswer,
       currentQuestion,
@@ -89,10 +91,11 @@ const Test = ({ location, user }) => {
     } = currentQuestionObject;
 
     if (selectedAnswer === "") {
-      alert("Please select an Answer");
+      setErrorMessage("Please select an Answer");
+      setQuestionError(true);
       return;
     }
-    console.log(startTime);
+
     if (correctAnswerCount + wrongAnswerCount <= 10) {
       if (selectedAnswer === currentQuestion.questionAnswer) {
         setCorrectAnswerCount(correctAnswerCount + 1);
@@ -120,11 +123,6 @@ const Test = ({ location, user }) => {
           }]);
         }
       }
-    } else {
-      alert(
-        "finished - SCORE: " +
-        correctAnswerCount / (correctAnswerCount + wrongAnswerCount)
-      );
     }
 
     if (currentQuestionIndex + 1 < 10) {
@@ -167,7 +165,8 @@ const Test = ({ location, user }) => {
       window.location = "/";
     } catch (ex) {
       if (ex.response) {
-        alert(ex.response.data);
+        setErrorMessage(ex.response.data);
+        setQuestionError(true);
       }
     }
   };
@@ -246,6 +245,11 @@ const Test = ({ location, user }) => {
                       );
                     })}
                     <hr />
+                    {questionError && (
+                      <div class="alert alert-danger p-1" role="alert">
+                        <strong>{errorMessage}</strong>
+                      </div>
+                    )}
                     {!finalizeTest && (
                       <button className="btn-next" onClick={handleNext}>
                         Next
@@ -265,7 +269,7 @@ const Test = ({ location, user }) => {
                       </React.Fragment>
                     )}
                     {empSignature && <button className="btn-submit" onClick={handleSubmit}>Submit Test - {(100 * correctAnswerCount) /
-                            (correctAnswerCount + wrongAnswerCount)}%</button>}
+                      (correctAnswerCount + wrongAnswerCount)}%</button>}
                   </MDBView>
                 )}
               </MDBCarouselItem>
