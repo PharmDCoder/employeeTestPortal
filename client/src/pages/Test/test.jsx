@@ -269,6 +269,9 @@ const Test = ({ location, user }) => {
                   </MDBView>
                 )}
               </MDBCarouselItem>
+              {/* <MDBCarouselItem itemId="3">
+                 <ADL />
+              </MDBCarouselItem> */}
             </MDBCarouselInner>
           </div>
         </MDBCarousel>

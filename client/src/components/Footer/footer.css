@@ -5,7 +5,7 @@
   /* background-color: blue; */
   /* color: #002357; */
   /* background-image: radial-gradient(#eee243 15%, #aa8b00 90%); */
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   /* left: 0; */
   /* right: 0; */
@@ -17,19 +17,18 @@
 
 }
 
-.footer p {
-  /* border: 2px solid red; */
-  /* font-size: 1.5em; */
+/* .footer p {
   text-align: center;
   margin: 0;
   font-weight: 800;
-}
+} */
 
 .footer-img {
   /* border: 5px solid white; */
   height: 75px;
   width: 250px;
   margin-left: 15%;
+  margin-bottom: 1%;
 }
 
 /* .footer-title {

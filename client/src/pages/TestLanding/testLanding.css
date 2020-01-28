@@ -38,6 +38,27 @@ svg {
   margin: 0 1% 0 1%;
 }
 
+#root > div > main > div > div > div > a > button {
+  color: #002357;
+  margin-bottom: 35%;
+  /* justify-content: center; */
+   width: 100%;
+   font-size: 1.5em;
+   font-weight: 800;
+   padding: 1%;
+  background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
+  outline: none;
+  border-color: transparent;
+  box-shadow: 5px 10px 20px #888888;
+}
+
+#root > div > main > div > div > div > a > button:focus {
+  color: white;
+}
+
+#root > div > main > div > div > div > a > button:active {
+  color: white;
+}
 /* .test-start-button {
   color: white;
   border: 5px solid white;
