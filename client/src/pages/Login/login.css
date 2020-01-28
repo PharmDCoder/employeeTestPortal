@@ -19,7 +19,8 @@ html {
   border-top: 20px solid #002357;
   border-radius: 5%;
   background-color: #c0c0c0;
-  box-shadow: 0px 15px 150px 10px #C0C0C0;
+  box-shadow: 0px 15px 150px 10px #c0c0c0;
+  overflow-y: scroll;
   /* height: 300px; */
   /* padding-top: 10%; */
 }
@@ -42,6 +43,10 @@ html {
   padding-left: 2%;
 }
 
+:placeholder-shown {
+  font-weight: 800;
+}
+
 .btn-submit-login {
   background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
   font-weight: 800;
@@ -55,13 +60,13 @@ html {
 }
 
 .btn-submit-login:active {
-  color: #C0C0C0;
+  color: #c0c0c0;
   box-shadow: 5px 10px 10px #0000c2;
 }
 
 /* **********  MEDIA QUERIES  ******** */
 
-@media only screen and (max-width: 600px) { 
+@media only screen and (max-width: 600px) {
   .login-welcome {
     margin: 5% 0 10% 0;
   }
@@ -76,13 +81,8 @@ html {
   }
 
   .btn-submit-login {
-    margin-top: 3%;
     padding: 2%;
     width: 30%;
-  }
-
-  footer p {
-    font-size: 1.25em;
   }
 }
 
@@ -98,15 +98,15 @@ html {
     height: 260px;
   }
 
-.login-form-control {
-  height: 2.5em;
-}
+  .login-form-control {
+    height: 2.5em;
+  }
 
-.btn-submit-login {
-  padding: 2%;
-  width: 25%;
+  .btn-submit-login {
+    padding: 2%;
+    width: 25%;
+  }
 }
-} 
 
 /* Medium devices (Portrait tablets and large landscape phones) */
 @media only screen and (min-width: 768px) {
@@ -133,6 +133,11 @@ html {
     /* margin-top: 2%; */
     font-size: 1.25em;
   }
+
+  .footer img {
+    height: 100px;
+    width: 450px;
+  }
 }
 
 /* Large handhelds (tablets landscape, large tablets portrait) */
@@ -145,24 +150,33 @@ html {
 
   .login-form {
     padding-top: 5%;
-    margin: 0 10%;
+    margin: auto;
+    margin-top: 10%;
     width: 80%;
     height: 420px;
   }
 
   .login-form-control {
-    width: 90%; 
+    width: 90%;
+    height: 3.75em;
+  }
+
+  .alert.alert-danger.p-1 {
+    width: 90%;
+    margin: auto;
+    font-size: 1.5em;
   }
 
   .btn-submit-login {
     font-size: 1.5em;
-    margin-top: 4%;
+    margin-top: 2%;
     width: 30%;
   }
 
-  footer p {
-    font-size: 1.75em;
+  :placeholder-shown {
+    font-weight: 800;
   }
+
 }
 
 /* Large devices (small laptops and desktops) */

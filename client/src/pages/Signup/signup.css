@@ -140,7 +140,7 @@ html {
 
   .footer img {
     height: 100px;
-    width: 300px;
+    width: 450px;
   }
 }
 
@@ -159,6 +159,12 @@ html {
 
   .signup-form-control {
     height: 3.5em;
+  }
+
+  .alert.alert-danger.p-1 {
+    width: 90%;
+    margin: auto;
+    font-size: 1.5em;
   }
 
   .btn-submit-signup {
