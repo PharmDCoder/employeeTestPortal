@@ -26,7 +26,10 @@ body {
     color-stop(50%, #0000c2),
     color-stop(100%, #002357)
   );
+  width: 100vw; /* trying to fix white sides on heroku deployment */
   background-attachment: fixed;
+  padding-bottom: 50px; /* Height of footer */
+  /* padding-top: 10px; */
 }
 
 

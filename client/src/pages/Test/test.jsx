@@ -189,14 +189,14 @@ const Test = ({ location, user }) => {
 
   return (
     <React.Fragment>
-      <Modal show={showModal} onHide={closeModal}>
+      <Modal className="modal" show={showModal} onHide={closeModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Employee Signature:</Modal.Title>
+          <Modal.Title className="modal-title">Employee Signature:</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <SignatureCanvas canvasProps={{ width: 300, height: 200, className: 'sigCanvas' }} ref={(ref) => { empSignaturePad = ref }} />
-          <button class="btn btn-primary" onClick={signatureClear}>Clear</button>
-          <button class="btn btn-success" onClick={signatureSave}>Save</button>
+          <button class="modal-clear-btn" onClick={signatureClear}>Clear</button>
+          <button class="modal-save-btn" onClick={signatureSave}>Save</button>
         </Modal.Body>
       </Modal>
 
@@ -264,7 +264,7 @@ const Test = ({ location, user }) => {
                         </button>
                       </React.Fragment>
                     )}
-                    {empSignature && <button className="btn-submit" onClick={handleSubmit}>Submit Test - {(100 * correctAnswerCount) /
+                    {empSignature && <button className="btn-submit" onClick={handleSubmit}>Submit Test {(100 * correctAnswerCount) /
                             (correctAnswerCount + wrongAnswerCount)}%</button>}
                   </MDBView>
                 )}

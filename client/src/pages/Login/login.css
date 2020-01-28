@@ -17,7 +17,9 @@ html {
 .login-form {
   /* border: 5px solid red; */
   border-top: 20px solid #002357;
+  border-radius: 5%;
   background-color: #c0c0c0;
+  box-shadow: 0px 15px 150px 10px #C0C0C0;
   /* height: 300px; */
   /* padding-top: 10%; */
 }
@@ -52,9 +54,9 @@ html {
   box-shadow: 5px 10px 10px #002357;
 }
 
-.btn-submit-login:focus {
-  /* background-color: blue; */
-  color: white;
+.btn-submit-login:active {
+  color: #C0C0C0;
+  box-shadow: 5px 10px 10px #0000c2;
 }
 
 /* **********  MEDIA QUERIES  ******** */

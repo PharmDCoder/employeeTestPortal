@@ -48,7 +48,7 @@ const TableList = ({ user, currentTests }) => {
             >
                 <button
                   key={test._id + "btn2"}
-                  className="btn btn-primary"
+                  className="btn btn-primary open-test-button"
                 >
                   Start
                                 </button>

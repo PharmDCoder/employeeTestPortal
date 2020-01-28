@@ -5,20 +5,19 @@
   margin-top: 3%;
   padding-top: 3%;
   background: #c0c0c0;
-  min-height: 600px;
-  max-height: 1200px;
-  margin-bottom: 30%;
+  height: 600px;
+  /* max-height: 1200px; */
+  margin-bottom: 10%;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
 
-.title {
-  /* color: blue; */
+/* .title {
   font-size: 4em;
   text-align: center;
-}
+} */
 
 .carousel {
   text-align: center;
@@ -60,15 +59,23 @@
   border-radius: 50px;
 }
 
-.wrapper h3 {
+.view h3 {
   font-size: 1.5em;
   font-weight: 800;
+  margin: 1% 0 0 0;
 }
 
-.wrapper h6 {
+/* .view h6 {
   color: blue;
   font-size: 2em;
   font-weight: 600;
+} */
+
+.view label {
+  color: #002357;
+  font-size: 1.15em;
+  font-weight: 700;
+  margin-bottom: 0;
 }
 
 /* .wrapper p {
@@ -89,30 +96,100 @@ label input {
 
 .btn-next,
 .btn-submit {
+  /* border-top: 8px solid #002357; */
   background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
-  padding: 3%;
-  width: 40%;
+  box-shadow: 5px 10px 10px #002357;
+  color: #002357;
+  font-weight: 800;
   margin-bottom: 2%;
-  border-radius: 10%;
+  border-radius: 5%;
   outline: none;
 }
 
-.btn-next:focus, 
+.btn-next:active, 
+.btn-submit:active {
+  outline: none;
+  color: #C0C0C0;
+  box-shadow: 5px 10px 10px #0000c2;
+}
+
+.btn-next:focus,
 .btn-submit:focus {
   outline: none;
 }
 
+/* MODAL STYLE  */
+
+.modal-header {
+  background: #002357;
+}
+.modal-body {
+  background-color: #c0c0c0;
+}
+
+.modal-title {
+  color: #C0C0C0;
+}
+
+canvas.sigCanvas {
+  background-color: white;
+  color: #002357;
+  margin-bottom: 5%;
+}
+
+.modal-clear-btn {
+  background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
+  border-radius: 5%;
+  box-shadow: 5px 10px 10px #002357;
+  color: #002357;
+  margin-right: 40%;
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.modal-save-btn {
+  background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
+  border-radius: 5%;
+  box-shadow: 5px 10px 10px #002357;
+  color: #002357;
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.modal-clear-btn:active,
+.modal-save-btn:active {
+  color: #C0C0C0;
+  box-shadow: 5px 10px 10px #0000c2;
+  outline: none;
+}
+
+.modal-clear-btn:focus,
+.modal-save-btn:focus {
+  outline: none;
+}
+
+/* END MODAL STYLE  */
+
+
+
 @media only screen and (max-width: 375px) {
   .carousel-container {
-    height: 550px;
-    margin-top: 8%;
+    height: 500px;
+    margin-top: 3%;
     padding-top: 5%;
     /* background-color: red; */
   }
 
   .carousel {
-    height: 535px;
+    height: 445px;
   }
+}
+
+.btn-next, 
+.btn-submit {
+  width: 50%;
+  font-size: 1.25em;
+  padding: 3%;
 }
 
 @media only screen and (min-width: 415px) and (max-width: 768px) {

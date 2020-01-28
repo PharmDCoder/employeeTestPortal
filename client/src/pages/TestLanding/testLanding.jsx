@@ -74,7 +74,8 @@ const TestLanding = ({ location, currentTests, user }) => {
             to={{ pathname: "/test", state: { test: currentTest } }}
             className="btnLink"
           >
-            <button className="btn btn-primary test-start-button">Start Test</button>
+            <button 
+            className="btn btn-primary test-start-button ">Start Test</button>
           </Link>
         </Col>
       </Row>
