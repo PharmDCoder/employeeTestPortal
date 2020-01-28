@@ -10,7 +10,7 @@
     overflow-x: hidden;
     padding-left: 2%;
     /* margin-bottom: 5%; */
-    /* padding-right: 2%; */
+    padding-right: 2%;
 }
 
 #root > div > main > div.dataTables_wrapper.dt-bootstrap4.bg-light.mb-5.pt-2.text-center.test-view-table > div > div > div > table > tbody > tr > td{

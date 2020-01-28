@@ -33,7 +33,10 @@ const TableList = ({ user, currentTests }) => {
                 key={test._id + "btn1"}
                 className="btn btn-success"
               >
+              {/* View
+              <br/> */}
                 {testRecord.foundRecord[0].testScore + "%"}
+                
           </button>
             </Link> : <Link
               key={test._id + "link2"}

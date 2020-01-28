@@ -7,7 +7,7 @@
   background: #c0c0c0;
   min-height: 600px;
   max-height: 1200px;
-  margin-bottom: 10%;
+  margin-bottom: 30%;
 }
 
 ::-webkit-scrollbar {
@@ -94,6 +94,12 @@ label input {
   width: 40%;
   margin-bottom: 2%;
   border-radius: 10%;
+  outline: none;
+}
+
+.btn-next:focus, 
+.btn-submit:focus {
+  outline: none;
 }
 
 @media only screen and (max-width: 375px) {
