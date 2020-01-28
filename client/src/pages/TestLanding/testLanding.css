@@ -38,18 +38,39 @@ svg {
   margin: 0 1% 0 1%;
 }
 
+#root > div > main > div > div > div > a > button {
+  color: #002357;
+  margin-bottom: 15%;
+  /* justify-content: center; */
+   width: 100%;
+   font-size: 1.5em;
+   font-weight: 800;
+   padding: 1%;
+  background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
+  outline: none;
+  border-color: transparent;
+  box-shadow: 5px 5px 20px 5px #C0C0C0;
+}
+
+#root > div > main > div > div > div > a > button:active {
+  color: #C0C0C0;
+}
+
+#root > div > main > div > div > div > a > button:active {
+  color: #C0C0C0;
+}
 /* .test-start-button {
   color: white;
   border: 5px solid white;
 } */
 
-#root > div > main > div > div:nth-child(3) > div > a > button {
+/* #root > div > main > div > div:nth-child(3) > div > a > button {
   margin-bottom: 10%;
 }
 
 button {
   margin-bottom: 10%;
-}
+} */
 
 
 

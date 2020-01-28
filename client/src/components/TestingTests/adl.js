@@ -1,11 +1,13 @@
 import React from "react";
-import "./adl.css";
+import "./materials.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ADL = () => {
   return (
     <div>
-      <h1 className="adl-title">Activities of Daily Living and Your Role</h1>
+      <h1 className="materials-title">
+        Activities of Daily Living and Your Role
+      </h1>
       <p>
         Activities of daily living - often called ADLs - are basic self-care
         activities that are considered essential for day-to-day living. There
@@ -35,7 +37,7 @@ const ADL = () => {
         confusion or cognitive disorders. Some of the more common reasons you
         will see in homecare patients include:
       </p>
-      <ul className="adl-ul-1 text-left">
+      <ul className="materials-ul-1 text-left">
         <li>Recent Surgery</li>
         <p>
           Many times patients have reduced endurance following surgery and are
@@ -107,8 +109,8 @@ const ADL = () => {
         patient improve in performing ADLs. Some areas in which you may help
         include:
       </p>
-      <ul className="adl-ul-2 text-left">
-        <li className="adl-improve-li">Dressing</li>
+      <ul className="materials-ul-2 text-left">
+        <li className="materials-improve-li">Dressing</li>
         <ul className="text-left">
           <li>
             Help the patient establish a routine for dressing that follows a
@@ -141,7 +143,7 @@ const ADL = () => {
             improve in doing for herself.
           </li>
         </ul>
-        <li className="adl-improve-li">Bathing</li>
+        <li className="materials-improve-li">Bathing</li>
         <ul className="text-left">
           <li>
             Help the patient establish a good time for bathing. This should be a
@@ -166,7 +168,7 @@ const ADL = () => {
           </li>
           <li>Allow the patient to bathe himself as much as possible.</li>
         </ul>
-        <li className="adl-improve-li">Eating</li>
+        <li className="materials-improve-li">Eating</li>
         <ul>
           <li>Help the patient establish a quiet, calm time for eating.</li>
           <li>
@@ -190,7 +192,7 @@ const ADL = () => {
             plenty of time for meals.
           </li>
         </ul>
-        <li className="adl-improve-li">Toileting</li>
+        <li className="materials-improve-li">Toileting</li>
         <ul>
           <li>
             If necessary, help the patient establish a bathroom routine. Some
@@ -212,7 +214,7 @@ const ADL = () => {
             after using the toilet.
           </li>
         </ul>
-        <li className="adl-improve-li">Transferring in and out of bed</li>
+        <li className="materials-improve-li">Transferring in and out of bed</li>
         <ul>
           <li>
             Consult with the nurse or therapist to find out exactly how the
@@ -230,7 +232,7 @@ const ADL = () => {
             more independent.
           </li>
         </ul>
-        <li className="adl-improve-li">Mobility</li>
+        <li className="materials-improve-li">Mobility</li>
         <ul>
           <li>
             Follow the assignment sheet in assisting the patient with ambulation
@@ -245,7 +247,7 @@ const ADL = () => {
         </ul>
       </ul>
       <h3>KEY POINTS IN HELPING PATIENTS IMPROVE IN ADL FUNCTIONALITY</h3>
-      <ul className="adl-ul-3 text-left">
+      <ul className="materials-ul-3 text-left">
         <li>
           Do not be tempted to do everything for the patient. Encourage the
           patient to do as much for himself as possible. While it may seem
