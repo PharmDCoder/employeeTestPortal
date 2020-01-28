@@ -2,3 +2,43 @@
     color:rgb(252, 252, 252);
     font-size: 1px;
 }
+
+.test-view-table {
+    border-top: 20px solid #002357;
+    height: 420px;
+    border-radius: 5%;
+    overflow-x: hidden;
+    padding-left: 2%;
+    /* margin-bottom: 5%; */
+    padding-right: 2%;
+}
+
+#root > div > main > div.dataTables_wrapper.dt-bootstrap4.bg-light.mb-5.pt-2.text-center.test-view-table > div > div > div > table > tbody > tr > td{
+    padding: 1%;
+}
+
+#root > div > main > div.dataTables_wrapper.dt-bootstrap4.bg-light.mb-5.pt-2.text-center.test-view-table > div > div > div > label > input {
+    border: 2px solid #002357;
+    border-radius: 5%;
+}
+
+.form-control {
+    border: 3px solid #002357;
+}
+
+/* #root > div > main > div.dataTables_wrapper.dt-bootstrap4.bg-light.mb-5.pt-2.text-center.test-view-table {
+    width: 100%;
+} */
+
+div.col-sm-12.col-md-7 > div > ul {
+    padding-top: 5%;
+    justify-content: center;
+}
+
+/* tbody > tr > td {
+    padding: 0;
+} */
+/* .table td,
+.table th {
+    padding-left: 0;
+} */
