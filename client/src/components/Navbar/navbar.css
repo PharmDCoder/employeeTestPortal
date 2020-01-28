@@ -13,7 +13,7 @@
   background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
   box-shadow: 4px 4px 10px 3px #c0c0c0;
   margin: 3% 0 2% 2%;
-  width: 70px;
+  /* width: 70px; */
 }
 
 /* .custom-toggler .navbar-toggler-icon {
