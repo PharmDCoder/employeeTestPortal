@@ -40,7 +40,7 @@ svg {
 
 #root > div > main > div > div > div > a > button {
   color: #002357;
-  margin-bottom: 35%;
+  margin-bottom: 15%;
   /* justify-content: center; */
    width: 100%;
    font-size: 1.5em;
@@ -53,11 +53,11 @@ svg {
 }
 
 #root > div > main > div > div > div > a > button:focus {
-  color: white;
+  color: #C0C0C0;
 }
 
 #root > div > main > div > div > div > a > button:active {
-  color: white;
+  color: #C0C0C0;
 }
 /* .test-start-button {
   color: white;

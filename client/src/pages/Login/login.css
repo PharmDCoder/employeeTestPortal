@@ -17,7 +17,9 @@ html {
 .login-form {
   /* border: 5px solid red; */
   border-top: 20px solid #002357;
+  border-radius: 5%;
   background-color: #c0c0c0;
+  box-shadow: 0px 15px 150px 10px #C0C0C0;
   /* height: 300px; */
   /* padding-top: 10%; */
 }
