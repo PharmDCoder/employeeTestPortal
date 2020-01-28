@@ -17,11 +17,17 @@ const TableList = ({ user, currentTests }) => {
       if (currentTests) {
         currentTests.forEach(test => {
           let testRecord = checkTestRecord(test);
+          let testDate;
+          if (testRecord.found) {
+            testDate = new Date(testRecord.foundRecord[0].testFinish)
+            testDate.setDate(testDate.getDate() + 364);
+          }
           console.log(testRecord)
           let testObject = {
             required: test.testRequired ? <FaExclamationCircle /> : '',
             name: test.testName,
-            dueDate: '1/1/21',
+            dueDate: test.testRequired ? testRecord.found
+              ? testDate.toLocaleDateString('en-US', { day: "numeric", month: "numeric", year: "2-digit" }) : '1/1/21' : '-',
             grade: testRecord.found ? testRecord.foundRecord[0].testScore + "%" : "-",
             actions: testRecord.found ? <Link key={test._id + "link1"} to={{
               pathname: "/testView",
@@ -56,8 +62,8 @@ const TableList = ({ user, currentTests }) => {
           };
           testDataHold.push(testObject);
         });
-        setTestData({columns:data.columns,rows:testDataHold});
-        console.log({columns:data.columns,rows:testDataHold});
+        setTestData({ columns: data.columns, rows: testDataHold });
+        console.log({ columns: data.columns, rows: testDataHold });
       }
     } catch (ex) { }
   }, [user, currentTests]);
@@ -66,7 +72,7 @@ const TableList = ({ user, currentTests }) => {
     const foundRecord = user.testrecord.filter(testRecord => {
       return testRecord.testID === test._id;
     });
-    return {found:foundRecord.length > 0, foundRecord: foundRecord};
+    return { found: foundRecord.length > 0, foundRecord: foundRecord };
   };
 
 
