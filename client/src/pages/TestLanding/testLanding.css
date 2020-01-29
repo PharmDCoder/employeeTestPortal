@@ -81,6 +81,41 @@ button {
 
 } */
 
+/* MEDIA QUERIES  */
+
+/* Medium devices (Portrait tablets and large landscape phones) */
+@media only screen and (min-width: 768px) {
+  .img {
+    margin: 5% 0 0% 0;
+    border: 5px solid #c0c0c0;
+    height: 400px;
+  }
+
+  .test-landing-title {
+    font-size: 4em;
+  }
+}
+
+/* Large handhelds (tablets landscape, large tablets portrait) */
+@media only screen and (min-width: 992px) {
+  .img {
+    margin: 5% 0 0% 0;
+    border: 5px solid #c0c0c0;
+    height: 500px;
+  }
+}
+
+
+/* Large devices (small laptops and desktops) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Large devices (tablets landscape, large tablets portrait) */
+@media only screen and (min-width: 1500px) {
+
+}
+
 
 
 
