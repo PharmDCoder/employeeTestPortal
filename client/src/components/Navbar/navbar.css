@@ -101,3 +101,38 @@ nav ul {
 .button:focus {
   outline: 0;
 }
+
+/* MEDIA QUERIES  */
+@media only screen and (max-width: 600px) { 
+
+}
+
+/* Small devices (landscape phones and large portrait phones 600px and up) */
+@media only screen and (min-width: 600px) {
+
+} 
+
+/* Medium devices (Portrait tablets and large landscape phones) */
+@media only screen and (min-width: 768px) {
+  nav .navbar-nav li a {
+    font-size: 1.75em;
+  }
+}
+
+/* Large handhelds (tablets landscape, large tablets portrait) */
+@media only screen and (min-width: 992px) {
+  nav .navbar-nav li a {
+    font-size: 2em;
+  }
+}
+
+
+/* Large devices (small laptops and desktops) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Large devices (tablets landscape, large tablets portrait) */
+@media only screen and (min-width: 1500px) {
+
+}

@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/backSafety.55bf26f4.jpg"
   },
   {
-    "revision": "6971cf15f903055b436e",
-    "url": "/static/css/main.e9f34bdf.chunk.css"
+    "revision": "c52d407935788d47c4a5",
+    "url": "/static/css/main.4dd279ee.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/static/media/HIPAA.53d2a587.jpg"
   },
   {
-    "revision": "6971cf15f903055b436e",
+    "revision": "c52d407935788d47c4a5",
     "url": "/static/js/main.eaad487f.chunk.js"
   },
   {
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/static/css/2.7b0f7126.chunk.css"
   },
   {
-    "revision": "6dd5cabaaf2a90eb339d4c923209db77",
+    "revision": "1c38130a60ec21877a0ec9983353efcf",
     "url": "/index.html"
   }
 ];
