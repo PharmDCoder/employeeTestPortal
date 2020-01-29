@@ -5,7 +5,7 @@
   margin-top: 3%;
   padding-top: 3%;
   background: #c0c0c0;
-  height: 600px;
+  height: 75vh;
   /* max-height: 1200px; */
   margin-bottom: 10%;
 }
@@ -28,12 +28,17 @@
   /* margin-bottom: 10%;  */
   padding: 15% 2% 0 2%;
   background: white;
-  height: 550px;
+  height: 68vh;
   overflow-y: scroll;
 }
 
 .carousel-content {
+  font-weight: 700;
   padding-bottom: 5%;
+}
+
+.carousel-content h3 {
+  color: #002357;
 }
 
 .carousel-indicators {
@@ -65,25 +70,12 @@
   margin: 1% 0 0 0;
 }
 
-/* .view h6 {
-  color: blue;
-  font-size: 2em;
-  font-weight: 600;
-} */
-
 .view label {
   color: #002357;
   font-size: 1.15em;
   font-weight: 700;
   margin-bottom: 0;
 }
-
-/* .wrapper p {
-  font-size: 1em;
-  font-weight: 500;
-  margin-bottom: 2%;
-  line-height: 1.5em;
-} */
 
 .radio-inline {
   font-size: 1.5em;
@@ -100,22 +92,30 @@ label input {
   background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
   box-shadow: 5px 10px 10px #002357;
   color: #002357;
-  font-weight: 800;
+  width: 50%;
+  font-size: 1.25em;
+  padding: 3%;
+  font-weight: 600;
   margin-bottom: 2%;
   border-radius: 5%;
   outline: none;
 }
 
-.btn-next:active, 
+.btn-next:active,
 .btn-submit:active {
   outline: none;
-  color: #C0C0C0;
+  color: #c0c0c0;
   box-shadow: 5px 10px 10px #0000c2;
 }
 
 .btn-next:focus,
 .btn-submit:focus {
   outline: none;
+}
+
+.you-scored {
+  font-size: 1.5em;
+  color: #002357;
 }
 
 /* MODAL STYLE  */
@@ -128,37 +128,34 @@ label input {
 }
 
 .modal-title {
-  color: #C0C0C0;
+  color: #c0c0c0;
 }
 
 canvas.sigCanvas {
   background-color: white;
   color: #002357;
   margin-bottom: 5%;
+  width: 100%;
 }
 
-.modal-clear-btn {
-  background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
-  border-radius: 5%;
-  box-shadow: 5px 10px 10px #002357;
-  color: #002357;
-  margin-right: 40%;
-  font-size: 1.5em;
-  font-weight: 800;
-}
-
+.modal-clear-btn,
 .modal-save-btn {
   background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
   border-radius: 5%;
   box-shadow: 5px 10px 10px #002357;
   color: #002357;
-  font-size: 1.5em;
-  font-weight: 800;
+  margin-right: 40%;
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.modal-save-btn {
+  margin: 0;
 }
 
 .modal-clear-btn:active,
 .modal-save-btn:active {
-  color: #C0C0C0;
+  color: #c0c0c0;
   box-shadow: 5px 10px 10px #0000c2;
   outline: none;
 }
@@ -168,16 +165,67 @@ canvas.sigCanvas {
   outline: none;
 }
 
+.modal button.close {
+  color: #c0c0c0;
+  opacity: 1;
+}
+
 /* END MODAL STYLE  */
 
+/* MEDIA QUERIES  */
 
+@media only screen and (max-width: 600px) {
+}
 
-@media only screen and (max-width: 375px) {
+/* Small devices (landscape phones and large portrait phones 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (Portrait tablets and large landscape phones) */
+@media only screen and (min-width: 768px) {
+  .carousel-content {
+    font-size: 1.5em;
+  }
+
+  .modal-body {
+    width: 70vw;
+    height: 47vh;
+  }
+
+  .modal-clear-btn,
+  .modal-save-btn {
+    border-radius: 5%;
+    box-shadow: 5px 10px 10px #002357;
+    margin-right: 40%;
+    font-size: 2em;
+    margin-top: 0;
+  }
+
+  .modal-save-btn {
+    margin: 0;
+  }
+}
+
+/* Large handhelds (tablets landscape, large tablets portrait) */
+@media only screen and (min-width: 992px) {
+  .carousel-content {
+    font-size: 2em;
+  }
+}
+
+/* Large devices (small laptops and desktops) */
+@media only screen and (min-width: 1200px) {
+}
+
+/* Large devices (tablets landscape, large tablets portrait) */
+@media only screen and (min-width: 1500px) {
+}
+
+/* @media only screen and (max-width: 375px) {
   .carousel-container {
     height: 500px;
     margin-top: 3%;
     padding-top: 5%;
-    /* background-color: red; */
   }
 
   .carousel {
@@ -206,14 +254,12 @@ canvas.sigCanvas {
   }
 
   .carousel {
-    /* background-color: red; */
     height: 730px;
   }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
   .carousel-container {
-    /* margin-top: 8%; */
     height: 1000px;
   }
 
@@ -227,4 +273,4 @@ canvas.sigCanvas {
     padding-right: 3%;
     padding-left: 3%;
   }
-}
+} */

@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/backSafety.55bf26f4.jpg"
   },
   {
-    "revision": "edf2e0e04180af2cfb7b",
-    "url": "/static/css/main.6ebca435.chunk.css"
+    "revision": "c52d407935788d47c4a5",
+    "url": "/static/css/main.4dd279ee.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/static/media/safeTransfers.c6a5332e.jpg"
   },
   {
-    "revision": "69d04fcff71d69f72b58",
-    "url": "/static/js/2.55d2f9e2.chunk.js"
+    "revision": "39e1f10516d9421ef3de",
+    "url": "/static/js/2.32399cd3.chunk.js"
   },
   {
     "revision": "2787ef86eb26e3f7a3265f154555dbd1",
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/static/media/HIPAA.53d2a587.jpg"
   },
   {
-    "revision": "edf2e0e04180af2cfb7b",
-    "url": "/static/js/main.d539423d.chunk.js"
+    "revision": "c52d407935788d47c4a5",
+    "url": "/static/js/main.eaad487f.chunk.js"
   },
   {
     "revision": "eac15a1ebb344e6768df0cbfe18e0031",
@@ -60,11 +60,11 @@ self.__precacheManifest = [
     "url": "/static/media/preventingFalls.aca39956.jpg"
   },
   {
-    "revision": "69d04fcff71d69f72b58",
+    "revision": "39e1f10516d9421ef3de",
     "url": "/static/css/2.7b0f7126.chunk.css"
   },
   {
-    "revision": "87fb78c188736c502bb0a1a11eabc19e",
+    "revision": "1c38130a60ec21877a0ec9983353efcf",
     "url": "/index.html"
   }
 ];
