@@ -25,7 +25,8 @@ const Signup = () => {
       });
 
       auth.loginWithJwt(jwt);
-      window.location = "/testlist";
+      window.location = "/";
+
     } catch (ex) {
       setUserError(true);
       setErrorMessage(ex.response.data);
