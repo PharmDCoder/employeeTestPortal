@@ -312,7 +312,7 @@ const Test = ({ location, user }) => {
                     )}
                     {finalizeTest && !empSignature && (
                       <React.Fragment>
-                        <h6>
+                        <h6 className="you-scored">
                           You scored a:{" "}
                           {(100 * correctAnswerCount) /
                             (correctAnswerCount + wrongAnswerCount)}
