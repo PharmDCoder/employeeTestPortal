@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "eac15a1ebb344e6768df0cbfe18e0031",
-    "url": "/static/media/footCare.eac15a1e.jpg"
+    "revision": "55bf26f4ff27187831e69e50774cccdd",
+    "url": "/static/media/backSafety.55bf26f4.jpg"
   },
   {
-    "revision": "a4b1153e674e79459784",
-    "url": "/static/css/main.87f2c210.chunk.css"
+    "revision": "edf2e0e04180af2cfb7b",
+    "url": "/static/css/main.6ebca435.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -16,8 +16,12 @@ self.__precacheManifest = [
     "url": "/static/media/safeTransfers.c6a5332e.jpg"
   },
   {
-    "revision": "b81498450ae5c2d7ea38",
-    "url": "/static/js/2.5ff52722.chunk.js"
+    "revision": "69d04fcff71d69f72b58",
+    "url": "/static/js/2.55d2f9e2.chunk.js"
+  },
+  {
+    "revision": "2787ef86eb26e3f7a3265f154555dbd1",
+    "url": "/static/media/sembraCareLogoTransparent1.2787ef86.png"
   },
   {
     "revision": "cebd4dcd9b796ffb8186193b2f316028",
@@ -28,12 +32,12 @@ self.__precacheManifest = [
     "url": "/static/media/HIPAA.53d2a587.jpg"
   },
   {
-    "revision": "55bf26f4ff27187831e69e50774cccdd",
-    "url": "/static/media/backSafety.55bf26f4.jpg"
+    "revision": "edf2e0e04180af2cfb7b",
+    "url": "/static/js/main.d539423d.chunk.js"
   },
   {
-    "revision": "a4b1153e674e79459784",
-    "url": "/static/js/main.e984b3a7.chunk.js"
+    "revision": "eac15a1ebb344e6768df0cbfe18e0031",
+    "url": "/static/media/footCare.eac15a1e.jpg"
   },
   {
     "revision": "04aabdd3babb4cb175c7a9ae4200d3c3",
@@ -56,11 +60,11 @@ self.__precacheManifest = [
     "url": "/static/media/preventingFalls.aca39956.jpg"
   },
   {
-    "revision": "b81498450ae5c2d7ea38",
-    "url": "/static/css/2.1840f988.chunk.css"
+    "revision": "69d04fcff71d69f72b58",
+    "url": "/static/css/2.7b0f7126.chunk.css"
   },
   {
-    "revision": "1bd85ee6f1d2c397a51e34482d1215a2",
+    "revision": "87fb78c188736c502bb0a1a11eabc19e",
     "url": "/index.html"
   }
 ];

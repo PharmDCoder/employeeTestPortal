@@ -30,6 +30,8 @@ const Test = ({ location, user }) => {
   const [wrongAnswerCount, setWrongAnswerCount] = useState();
   const [startTime, setStartTime] = useState();
   const [questionList, setQuestionsList] = useState([]);
+  const [questionError, setQuestionError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [finalizeTest, setFinalizeTest] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [empSignature, setEmpSignature] = useState(false);
@@ -90,7 +92,7 @@ const Test = ({ location, user }) => {
 
   const handleNext = async e => {
     e.preventDefault();
-
+    setQuestionError(false);
     const {
       selectedAnswer,
       currentQuestion,
@@ -98,10 +100,11 @@ const Test = ({ location, user }) => {
     } = currentQuestionObject;
 
     if (selectedAnswer === "") {
-      alert("Please select an Answer");
+      setErrorMessage("Please select an Answer");
+      setQuestionError(true);
       return;
     }
-    console.log(startTime);
+
     if (correctAnswerCount + wrongAnswerCount <= 10) {
       if (selectedAnswer === currentQuestion.questionAnswer) {
         setCorrectAnswerCount(correctAnswerCount + 1);
@@ -138,11 +141,6 @@ const Test = ({ location, user }) => {
           ]);
         }
       }
-    } else {
-      alert(
-        "finished - SCORE: " +
-          correctAnswerCount / (correctAnswerCount + wrongAnswerCount)
-      );
     }
 
     if (currentQuestionIndex + 1 < 10) {
@@ -182,10 +180,11 @@ const Test = ({ location, user }) => {
       };
       testService.postTestRecord(testRecord, user.id);
 
-      window.location = "/";
+      window.location = "/testlist";
     } catch (ex) {
       if (ex.response) {
-        alert(ex.response.data);
+        setErrorMessage(ex.response.data);
+        setQuestionError(true);
       }
     }
   };
@@ -234,21 +233,21 @@ const Test = ({ location, user }) => {
 
   return (
     <React.Fragment>
-      <Modal show={showModal} onHide={closeModal}>
+      <Modal className="modal" show={showModal} onHide={closeModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Employee Signature:</Modal.Title>
+          <Modal.Title className="modal-title">Employee Signature:</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="text-center">
           <SignatureCanvas
             canvasProps={{ width: 300, height: 200, className: "sigCanvas" }}
             ref={ref => {
               empSignaturePad = ref;
             }}
           />
-          <button class="btn btn-primary" onClick={signatureClear}>
+          <button class="modal-clear-btn" onClick={signatureClear}>
             Clear
           </button>
-          <button class="btn btn-success" onClick={signatureSave}>
+          <button class="modal-save-btn" onClick={signatureSave}>
             Save
           </button>
         </Modal.Body>
@@ -260,7 +259,7 @@ const Test = ({ location, user }) => {
           className="z-depth-1 carousel"
           activeItem={1}
           length={2}
-          showControls={true}
+          showControls={false}
           showIndicators={true}
           interval={false}
         >
@@ -301,6 +300,11 @@ const Test = ({ location, user }) => {
                       }
                     )}
                     <hr />
+                    {questionError && (
+                      <div class="alert alert-danger p-1" role="alert">
+                        <strong>{errorMessage}</strong>
+                      </div>
+                    )}
                     {!finalizeTest && (
                       <button className="btn-next" onClick={handleNext}>
                         Next
@@ -321,7 +325,7 @@ const Test = ({ location, user }) => {
                     )}
                     {empSignature && (
                       <button className="btn-submit" onClick={handleSubmit}>
-                        Submit Test -{" "}
+                        Submit Test{" "}
                         {(100 * correctAnswerCount) /
                           (correctAnswerCount + wrongAnswerCount)}
                         %
@@ -330,6 +334,9 @@ const Test = ({ location, user }) => {
                   </MDBView>
                 )}
               </MDBCarouselItem>
+              {/* <MDBCarouselItem itemId="3">
+                 <ADL />
+              </MDBCarouselItem> */}
             </MDBCarouselInner>
           </div>
         </MDBCarousel>

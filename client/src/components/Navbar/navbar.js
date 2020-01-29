@@ -19,7 +19,7 @@ const NavBar = ({ user }) => {
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent15">
         <ul className="navbar-nav text-center">
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link
               to="/"
               className={
@@ -31,7 +31,7 @@ const NavBar = ({ user }) => {
             >
               Home
             </Link>
-          </li>
+          </li> */}
           {!user && (
             <React.Fragment>
               <li

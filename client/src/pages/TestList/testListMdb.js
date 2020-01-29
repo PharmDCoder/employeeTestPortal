@@ -17,11 +17,17 @@ const TableList = ({ user, currentTests }) => {
       if (currentTests) {
         currentTests.forEach(test => {
           let testRecord = checkTestRecord(test);
+          let testDate;
+          if (testRecord.found) {
+            testDate = new Date(testRecord.foundRecord[0].testFinish)
+            testDate.setDate(testDate.getDate() + 364);
+          }
           console.log(testRecord)
           let testObject = {
             required: test.testRequired ? <FaExclamationCircle /> : '',
             name: test.testName,
-            dueDate: '1/1/21',
+            dueDate: test.testRequired ? testRecord.found
+              ? testDate.toLocaleDateString('en-US', { day: "numeric", month: "numeric", year: "2-digit" }) : '1/1/21' : '-',
             grade: testRecord.found ? testRecord.foundRecord[0].testScore + "%" : "-",
             actions: testRecord.found ? <Link key={test._id + "link1"} to={{
               pathname: "/testView",
@@ -33,7 +39,10 @@ const TableList = ({ user, currentTests }) => {
                 key={test._id + "btn1"}
                 className="btn btn-success"
               >
-                View
+              {/* View
+              <br/> */}
+                {testRecord.foundRecord[0].testScore + "%"}
+                
           </button>
             </Link> : <Link
               key={test._id + "link2"}
@@ -45,7 +54,7 @@ const TableList = ({ user, currentTests }) => {
             >
                 <button
                   key={test._id + "btn2"}
-                  className="btn btn-primary"
+                  className="btn btn-primary open-test-button"
                 >
                   Start
                                 </button>
@@ -53,8 +62,8 @@ const TableList = ({ user, currentTests }) => {
           };
           testDataHold.push(testObject);
         });
-        setTestData({columns:data.columns,rows:testDataHold});
-        console.log({columns:data.columns,rows:testDataHold});
+        setTestData({ columns: data.columns, rows: testDataHold });
+        console.log({ columns: data.columns, rows: testDataHold });
       }
     } catch (ex) { }
   }, [user, currentTests]);
@@ -63,7 +72,7 @@ const TableList = ({ user, currentTests }) => {
     const foundRecord = user.testrecord.filter(testRecord => {
       return testRecord.testID === test._id;
     });
-    return {found:foundRecord.length > 0, foundRecord: foundRecord};
+    return { found: foundRecord.length > 0, foundRecord: foundRecord };
   };
 
 
@@ -87,12 +96,12 @@ const TableList = ({ user, currentTests }) => {
         sort: 'asc',
         width: 100
       },
-      {
-        label: 'Grade',
-        field: 'grade',
-        sort: 'asc',
-        width: 100
-      },
+      // {
+      //   label: 'Grade',
+      //   field: 'grade',
+      //   sort: 'asc',
+      //   width: 100
+      // },
       {
         label: '',
         field: 'actions',
@@ -116,7 +125,7 @@ const TableList = ({ user, currentTests }) => {
         <Greeting className="greeting" user={user} />
         <MDBDataTable
           data={testData}
-          className="bg-light mb-5 pt-2 text-center"
+          className="bg-light mb-5 pt-2 text-center test-view-table"
           displayEntries={false}
           noBottomColumns="false"
           searchLabel="Search Test"

@@ -12,9 +12,8 @@ const Signup = () => {
   const [email, setemail] = useState();
   const [password, setPassword] = useState();
   const [employeeName, setemployeeName] = useState();
-
-  // useEffect(() => {
-  // }, [search]);
+  const [userError, setUserError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -24,12 +23,12 @@ const Signup = () => {
         password: password,
         employeeName: employeeName
       });
+
       auth.loginWithJwt(jwt);
-      window.location = "/";
+      window.location = "/testlist";
     } catch (ex) {
-      if (ex.response) {
-        alert(ex.response.data);
-      }
+      setUserError(true);
+      setErrorMessage(ex.response.data);
     }
   };
 
@@ -49,6 +48,11 @@ const Signup = () => {
                 name="email"
                 onChange={e => setemail(e.target.value)}
               />
+              {userError && (
+                <div class="alert alert-danger p-1" role="alert">
+                  <strong>{errorMessage}</strong>
+                </div>
+              )}
             </Col>
           </Row>
           <Row className="signup-form-group">

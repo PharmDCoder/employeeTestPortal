@@ -17,7 +17,10 @@ html {
 .signup-form {
   /* border: 5px solid red;  */
   border-top: 20px solid #002357;
+  border-radius: 5%;
   background-color: #c0c0c0;
+  /* box-shadow: 0px 0px 50px 5px #aa8b00; */
+  box-shadow: 0px 0px 50px 5px #C0C0C0;
   height: 350px;
   padding-top: 12%;
 }
@@ -38,7 +41,7 @@ html {
 .btn-submit-signup {
   background-image: radial-gradient(#eee243 15%, #aa8b00 90%);
   font-weight: 800;
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   padding: 3%;
   width: 50%;
   border-radius: 10%;
@@ -47,9 +50,10 @@ html {
   box-shadow: 5px 10px 10px #002357;
 }
 
-.btn-submit-signup:focus {
+.btn-submit-signup:active {
   /* background-color: blue; */
-  color: white;
+  color:#C0C0C0;
+  box-shadow: 5px 10px 10px #0000c2;
 }
 
 /* **********  MEDIA QUERIES  ******** */
@@ -57,12 +61,13 @@ html {
 @media only screen and (max-width: 600px) { 
   .signup-welcome {
     padding: 0;
-    margin: 5% 0 5% 0;
+    margin: 5% 0 7% 0;
   }
 
   .signup-form {
     /* border: 10px solid black; */
-    height: 370px;
+    height: 340px;
+    padding-top: 8%;
     /* margin: auto; */
   } 
 
@@ -71,15 +76,17 @@ html {
   }
 
   .btn-submit-signup {
+    font-size: 1.15em;
     margin-top: 5%;
-    width: 50%;
+    padding: 3%;
+    width: 40%
   }
 
-  footer p {
+  /* footer p {
     font-size: 1.5em;
     margin: 0;
     padding: 2%;
-  }
+  } */
 }
 
 /* Small devices (landscape phones and large portrait phones 600px and up) */
