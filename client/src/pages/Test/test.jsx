@@ -8,7 +8,7 @@ import {
   MDBContainer
 } from "mdbreact";
 import { Modal } from "react-bootstrap";
-import HIPAA from "../../constants/materials.js";
+// import HIPAA from "../../constants/materials.js";
 import testService from "../../services/testService";
 import SignatureCanvas from "react-signature-canvas";
 import ADL from "../../components/TestingTests/adl.js";
