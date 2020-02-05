@@ -6,11 +6,11 @@
 .test-view-table {
     border-top: 20px solid #002357;
     box-shadow: 0px 5px 50px 0px #C0C0C0;
-    height: 63vh;
+    height: 70vh;
     border-radius: 5%;
     overflow-x: hidden;
     padding-left: 2%;
-    margin: 3% 0% 0% 0%;
+    margin: 5% 0% 0% 0%;
     padding-right: 2%;
 }
 
