@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>ADL Course Materials</title>
-</head>
-<body>
+import React from "react";
+import "./materials.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const ADL = () => {
+  return (
     <div>
-      <h1>Activities of Daily Living and Your Role</h1>
-      <h3>FACTS</h3>
+      <h1 className="materials-title">
+        Activities of Daily Living and Your Role
+      </h1>
       <p>
         Activities of daily living - often called ADLs - are basic self-care
         activities that are considered essential for day-to-day living. There
@@ -39,7 +37,7 @@
         confusion or cognitive disorders. Some of the more common reasons you
         will see in homecare patients include:
       </p>
-      <ul className="adl-ul-1 text-left">
+      <ul className="materials-ul-1 text-left">
         <li>Recent Surgery</li>
         <p>
           Many times patients have reduced endurance following surgery and are
@@ -111,8 +109,8 @@
         patient improve in performing ADLs. Some areas in which you may help
         include:
       </p>
-      <ul className="adl-ul-2 text-left">
-        <li>Dressing</li>
+      <ul className="materials-ul-2 text-left">
+        <li className="materials-improve-li">Dressing</li>
         <ul className="text-left">
           <li>
             Help the patient establish a routine for dressing that follows a
@@ -145,17 +143,148 @@
             improve in doing for herself.
           </li>
         </ul>
-        <li>Bathing</li>
-        <li>Eating</li>
-        <li>Toileting</li>
-        <li>Transferring in and out of bed</li>
-        <li>Mobility</li>
+        <li className="materials-improve-li">Bathing</li>
+        <ul className="text-left">
+          <li>
+            Help the patient establish a good time for bathing. This should be a
+            time when he is not rushed or tired from other activities.
+          </li>
+          <li>
+            Help the patient organize everything needed for the bath. The type
+            of bath she will take will be on the assignment sheet.
+          </li>
+          <li>
+            Never assist the patient into the shower or tub if it cannot be done
+            safely. The nurse or therapist should have assessed the safety but
+            if the patient needs a bath seat, non-skid mats or grab bars in
+            order to be safe, do not put him in the tub without them. Notify the
+            supervisor that you do not feel it is safe to bathe him in the tub
+            and follow the supervisor’s directions. - Don’t forget to document
+            this on the visit report.
+          </li>
+          <li>
+            Learn how to use any bathing aids the patient may have. She may also
+            have grooming aids to help her.
+          </li>
+          <li>Allow the patient to bathe himself as much as possible.</li>
+        </ul>
+        <li className="materials-improve-li">Eating</li>
+        <ul>
+          <li>Help the patient establish a quiet, calm time for eating.</li>
+          <li>
+            Encourage the family to prepare finger foods that may be easier to
+            manage.
+          </li>
+          <li>
+            Help the patient and family organize the table so that things are
+            within easy reach.
+          </li>
+          <li>
+            Learn to use any assistive devices the patient may have. There are
+            numerous aids including utensils with wide handles, swivels or
+            straps, non-skid mats to keep plates from sliding, plates with plate
+            guards so food can be pushed onto the spoon, special glasses and
+            cups. If you think the patient could benefit from such devices, talk
+            with the nurse.
+          </li>
+          <li>
+            Never rush the patient to eat and encourage the family to allow
+            plenty of time for meals.
+          </li>
+        </ul>
+        <li className="materials-improve-li">Toileting</li>
+        <ul>
+          <li>
+            If necessary, help the patient establish a bathroom routine. Some
+            patients do not have the normal warning time that signals the need
+            to urinate. These patients may do well to use the toilet routinely
+            every three hours to prevent incontinence.
+          </li>
+          <li>
+            Many patients do better with a raised toilet that makes coming to a
+            standing position much easier.
+          </li>
+          <li>
+            Notify the supervisor if there are structural barriers that keep the
+            patient from getting to the toilet.
+          </li>
+          <li>
+            Learn how to use assistive toileting devices. This may include a
+            long curved reaching device that allows the patient to wipe herself
+            after using the toilet.
+          </li>
+        </ul>
+        <li className="materials-improve-li">Transferring in and out of bed</li>
+        <ul>
+          <li>
+            Consult with the nurse or therapist to find out exactly how the
+            patient should be assisted with transfers and to what extent he is
+            expected to improve. A joint visit with the therapist or nurse can
+            be very helpful in establishing a consistent approach.
+          </li>
+          <li>
+            Assist the patient as directed on the assignment sheet, allowing the
+            patient to participate as much as possible.
+          </li>
+          <li>
+            Assist the patient with any assigned exercises. These will help
+            condition and strengthen the muscles and help the patient become
+            more independent.
+          </li>
+        </ul>
+        <li className="materials-improve-li">Mobility</li>
+        <ul>
+          <li>
+            Follow the assignment sheet in assisting the patient with ambulation
+            or in use of the wheelchair.
+          </li>
+          <li>Encourage the patient to participate as much as possible.</li>
+          <li>Give lots or praise and encouragement.</li>
+          <li>
+            Help the patient schedule activities so that there is time for rest
+            in between.
+          </li>
+        </ul>
+      </ul>
+      <h3>KEY POINTS IN HELPING PATIENTS IMPROVE IN ADL FUNCTIONALITY</h3>
+      <ul className="materials-ul-3 text-left">
+        <li>
+          Do not be tempted to do everything for the patient. Encourage the
+          patient to do as much for himself as possible. While it may seem
+          easier and may take less time, doing for the patient will not promote
+          independence.
+        </li>
+
+        <li>
+          Be an advocate for your patient. Don’t be reluctant to talk with the
+          supervisor or nurse if you think the patient needs devices to help
+          him.
+        </li>
+        <li>
+          Give lots of praise and encouragement. Point out to the patient how
+          much progress she is making. Focus on what she can do, not what she
+          cannot do.
+        </li>
+        <li>
+          Be patient and allow the patient time to participate. Many times the
+          task will take much longer when the patient does it for himself. Keep
+          in mind that the patient needs to learn to do these things so he can
+          manage when he is no longer receiving homecare.
+        </li>
+        <li>
+          Help the patient to be realistic. If the nurse or therapist tells you
+          that the patient will never be able to do a certain task, help the
+          patient adjust. Keep in mind that some patients will never be
+          independent in ADLs no matter what assistive devices are available.
+        </li>
+        <li>
+          Carefully document the patient’s progress. Stay in close contact with
+          the nurse, therapist and other team member about the improvements that
+          may have taken place.
+        </li>
       </ul>
     </div>
   );
 };
 
 export default ADL;
-
-</body>
-</html>

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Container from "../../components/Container";
 import Col from "../../components/Col";
 import Row from "../../components/Row";
-import auth from "../../services/authService"
-import './login.css';
+import auth from "../../services/authService";
+import "./login.css";
 // import '../Signup/signup.css';
 
 const Login = () => {
@@ -16,15 +16,14 @@ const Login = () => {
   // useEffect(() => {
   // }, [search]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     try {
       const userResponse = await auth.login(email, password);
 
       if (userResponse) {
         setErrorMessage(userResponse);
-        if(userResponse === "User Not Found")
-        {
+        if (userResponse === "User Not Found") {
           setLoginError(true);
           setPasswordError(false);
         } else if (userResponse === "Wrong Password for this user") {
@@ -35,7 +34,7 @@ const Login = () => {
           setPasswordError(true);
         }
       } else {
-        window.location = "/";
+        window.location = "/testlist";
       }
     } catch (ex) {
       //set error to ex
