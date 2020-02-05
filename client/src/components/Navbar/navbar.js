@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Greeting from "../../components/Greeting/greeting";
 import "./navbar.css";
 
 const NavBar = ({ user }) => {
   return (
     <nav className="custom-navbar navbar-light justify-content-left">
+    <Greeting className="greeting" user={user} />
       <button
         className="navbar-toggler custom-toggler"
         type="button"

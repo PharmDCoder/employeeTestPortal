@@ -1,10 +1,13 @@
 .greeting h2 {
+  position: absolute;
+  right: 25px;
   font-family: "Oswald", sans-serif;
   /* color: #002357; */
   color: #c0c0c0;
   /* color: #eee243; */
   font-size: 2em;
   margin-bottom: 3%;
-  margin-top: 2%;
+  margin-top: 3%;
   font-weight: bold;
+  /* width: 50%; */
 }

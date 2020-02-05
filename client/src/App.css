@@ -29,6 +29,7 @@ body {
   /* width: 100vw; */
   background: cover;
   background-attachment: fixed;
+  padding-top: 2%;
   padding-bottom: 50px; /* Height of footer */
   /* padding-top: 10px; */
 }
