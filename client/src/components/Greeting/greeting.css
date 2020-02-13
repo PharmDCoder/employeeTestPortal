@@ -1,13 +1,50 @@
-.greeting h2 {
+.greeting {
   position: absolute;
-  right: 40px;
-  font-family: "Oswald", sans-serif;
+  right: 5%;
+  top: 1.5%;
+  font-family: 'Coda Caption', sans-serif;
+  /* font-family: "Oswald", sans-serif; */
   /* color: #002357; */
-  color: #c0c0c0;
+  color: #C0C0C0;
   /* color: #eee243; */
   font-size: 2em;
   margin-bottom: 3%;
-  margin-top: 5%;
+  /* margin-top: 4%; */
   font-weight: bold;
   /* width: 50%; */
+}
+
+/* MEDIA QUERIES  */
+
+@media only screen and (max-width: 600px) { 
+
+}
+
+/* Small devices (landscape phones and large portrait phones 600px and up) */
+@media only screen and (min-width: 600px) {
+  .greeting {
+    right: 25%;
+    top: 4%;
+  }
+} 
+
+/* Medium devices (Portrait tablets and large landscape phones) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large handhelds (tablets landscape, large tablets portrait) */
+@media only screen and (min-width: 992px) {
+
+}
+
+
+/* Large devices (small laptops and desktops) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Large devices (tablets landscape, large tablets portrait) */
+@media only screen and (min-width: 1500px) {
+
 }

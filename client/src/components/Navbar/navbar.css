@@ -52,16 +52,24 @@ nav .navbar-nav li a {
   letter-spacing: 0.25em;
 }
 
+nav .navbar-nav li a:hover {
+  background: #0000c2;
+}
+
 .navbar-toggler:active {
-  outline: 0;
+  outline: none;
   border: none;
   color: #c0c0c0;
   box-shadow: 5px 10px 10px #002357;
 }
 
-.navbar-toggler-icon:active {
-  color: #c0c0c0;
+.navbar-toggler:focus {
+  outline: none;
 }
+
+/* .navbar-toggler-icon:active {
+  color: #c0c0c0;
+} */
 
 nav ul {
   background: #002357;

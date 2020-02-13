@@ -63,9 +63,13 @@
 
 #question-explanation {
   border-bottom: 2px solid #002357;
-  
   padding-bottom: 3%;
   margin-bottom: 5%;
+}
+
+#question-explanation p {
+  font-size: .90em;
+  font-weight: 800;
 }
 
 /* MEDIA QUERIES  */

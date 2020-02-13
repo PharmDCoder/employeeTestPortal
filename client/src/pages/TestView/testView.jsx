@@ -23,12 +23,14 @@ const TestView = ({ location, currentTests, user }) => {
 
       console.log(testLoad);
       console.log(currentTestRecord);
-    } catch (ex) { }
+    } catch (ex) {}
   });
 
   return (
     <Container className="summary-container">
-      {currentTest && <h2 className="text-center test-title">{currentTest.testName}</h2>}
+      {currentTest && (
+        <h2 className="text-center test-title">{currentTest.testName}</h2>
+      )}
       <Row className="text-center">
         {currentTest && (
           <Col size="12" className="test-summary">
@@ -60,14 +62,7 @@ const TestView = ({ location, currentTests, user }) => {
             {testRecord.testQuestionList.map((testQuestion, index) => {
               console.log(testQuestion);
               return (
-                <div
-                  id="question-explanation"
-                  className={
-                    !testQuestion.testQuestionCorrect
-                      ? "text-danger"
-                      : "text-dark"
-                  }
-                >
+                <div id="question-explanation">
                   <p>
                     {index + 1} - {testQuestion.testQuestionText}
                   </p>
@@ -76,7 +71,13 @@ const TestView = ({ location, currentTests, user }) => {
                     {testQuestion.testQuestionAnswer}
                   </p>
                   {!testQuestion.testQuestionCorrect && (
-                    <p>
+                    <p
+                      className={
+                        !testQuestion.testQuestionCorrect
+                          ? "text-danger"
+                          : "text-dark"
+                      }
+                    >
                       <strong>Explanation: </strong>
                       {testQuestion.testQuestionExplanation}
                     </p>
