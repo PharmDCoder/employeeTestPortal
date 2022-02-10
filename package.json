@@ -29,7 +29,7 @@
     "jwt-decode": "^2.2.0",
     "material-icons": "^0.3.1",
     "mongoose": "^5.3.16",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "popper.js": "^1.16.0"
   }
 }
